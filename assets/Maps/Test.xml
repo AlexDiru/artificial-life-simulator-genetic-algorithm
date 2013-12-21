@@ -1,0 +1,32 @@
+<map xsize="20" ysize="20">
+	<obstacle>0,16</obstacle>
+	<obstacle>0,15</obstacle>
+	<obstacle>0,14</obstacle>
+	<obstacle>0,17</obstacle>
+	<obstacle>0,18</obstacle>
+	<obstacle>0,19</obstacle>
+	<obstacle>1,19</obstacle>
+	<obstacle>2,19</obstacle>
+	<obstacle>3,19</obstacle>
+	<obstacle>3,18</obstacle>
+	<obstacle>3,17</obstacle>
+	<obstacle>2,17</obstacle>
+	<obstacle>1,17</obstacle>
+	<obstacle>3,16</obstacle>
+	<obstacle>3,15</obstacle>
+	<obstacle>3,14</obstacle>
+	<water>5,5</water>
+	<food>5,6</food>
+	<poison>5,7</poison>
+	<lifeform>0,0</lifeform>
+	<food>1,0</food>
+	<food>1,1</food>
+	<food>0,1</food>
+	<food>0,2</food>
+	<food>1,2</food>
+	<food>2,2</food>
+	<food>2,1</food>
+	<food>2,0</food>
+	<food>3,0</food>
+	<food>3,1</food>
+</map>
