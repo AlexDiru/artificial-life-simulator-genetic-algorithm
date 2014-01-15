@@ -285,8 +285,8 @@ public class LifeForm extends Object2D{
 	
 	public void update() {
 		//Update the life form depending on whether GA and/or GP is being used
-		updateGA();
-        reachForFood();
+		watch();
+        updateGA();
 	}
 	
 	public void updateGP() {
@@ -298,7 +298,6 @@ public class LifeForm extends Object2D{
 	 */
 	public void updateGA() {
         angle = Geometry.lockAngle(angle);
-        watch();
 		senses.evaluateBehaviourTree();
 		
 		/*
@@ -363,14 +362,23 @@ public class LifeForm extends Object2D{
 	}
 	
 	/**
-	 * Whether the item is on the left side of the life (180 degrees area)
-	 * @param targetItem
+	 * Whether the item is on the left side of the life (180 degrees area) and the life form is also not facing the item
+	 * @param targetItem The item to check
 	 * @return
 	 */
 	private boolean isItemOnLeftSide(Item targetItem) {
 		double itemAngle = (int)Geometry.lockAngle(getAngle(targetItem));
-		return !Geometry.isAngleBetween(itemAngle, angle, angle - 180);
+		return !Geometry.isAngleBetween(itemAngle, angle, angle - 180) && !isFacing(targetItem);
 	}
+
+    /**
+     * Whether the item is on the right side of the life (180 degrees area) and the life form is also not facing the item
+     * @param item The item to check
+     * @return
+     */
+    private boolean isItemOnRightSide(Item item) {
+        return !isItemOnLeftSide(item) && !isFacing(item);
+    }
 	
 	/**
 	 * Gets the item in the list which is closest to the point x,y
@@ -492,7 +500,7 @@ public class LifeForm extends Object2D{
 			return;
 		ArrayList<Item> itemsToRemove = new ArrayList<Item>();
 		for (Item item : itemsInSight)
-			if (Geometry.isPointWithinCircle(item.getXPosition(), item.getYPosition(), xPosition, yPosition, senses.getReachDistance())) {
+			if (canReach(item)) {
 				item.apply(this);
 				memory.removeFromMemory(item);
 				itemsToRemove.add(item);
@@ -511,6 +519,29 @@ public class LifeForm extends Object2D{
                     return true;
         return false;
 	}
+
+    public boolean isPoisonOnLeft() {
+        for (Item item : itemsInSight)
+            if (item instanceof Poison)
+                if (isItemOnLeftSide(item))
+                    return true;
+        return false;
+    }
+
+    public boolean isPoisonOnRight() {
+        for (Item item : itemsInSight)
+            if (item instanceof Poison)
+                if (isItemOnRightSide(item))
+                    return true;
+        return false;
+    }
+    public boolean isFacingPoison() {
+        for (Item item : itemsInSight)
+            if (item instanceof Poison)
+                if (isFacing(item))
+                    return true;
+        return false;
+    }
 	
 	public boolean isFacingFood() {
         for (Item item : itemsInSight)
@@ -523,7 +554,7 @@ public class LifeForm extends Object2D{
 	public boolean isFoodOnRight() {
         for (Item item : itemsInSight)
             if (item instanceof Food)
-                if (!isItemOnLeftSide(item) && !isFacing(item))
+                if (isItemOnRightSide(item))
                     return true;
         return false;
 	}
@@ -536,5 +567,17 @@ public class LifeForm extends Object2D{
         this.chromosome = chromosome;
         senses.setProperties(chromosome, this);
         memory = new LifeFormMemory(senses.getMemoryLength());
+    }
+
+    public boolean canReachFood() {
+        for (Item item : itemsInSight)
+            if (item instanceof Food)
+                if (canReach(item))
+                    return true;
+        return false;
+    }
+
+    private boolean canReach(Item item) {
+        return (Geometry.isPointWithinCircle(item.getXPosition(), item.getYPosition(), xPosition, yPosition, senses.getReachDistance()));
     }
 }

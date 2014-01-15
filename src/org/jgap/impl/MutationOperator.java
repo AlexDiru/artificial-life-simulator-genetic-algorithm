@@ -176,13 +176,16 @@ public class MutationOperator
           // whether the current gene should be mutated.
           // --------------------------------------------------------------
           mutate = m_mutationRateCalc.toBePermutated(chrom, j);
-        }
+        } else if (this instanceof CompositeGeneTreeMutationOperator) {
+           mutate = ((CompositeGeneTreeMutationOperator)(this)).isMutationSuccessful(generator, j);
+         }
         else {
           // Non-dynamic, so just mutate based on the the current rate.
           // In fact we use a rate of 1/m_mutationRate.
           // ----------------------------------------------------------
           mutate = (generator.nextInt(m_config.m_mutationRate) == 0);
         }
+
         if (mutate) {
           // Verify that crossover allowed.
           // ------------------------------
@@ -258,7 +261,8 @@ public class MutationOperator
     }
   }
 
-  /**
+
+    /**
    * Helper: mutate all atomic elements of a gene.
    *
    * @param a_gene the gene to be mutated

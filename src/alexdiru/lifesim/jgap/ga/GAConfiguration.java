@@ -18,16 +18,6 @@ import alexdiru.lifesim.main.World;
 public class GAConfiguration extends DefaultConfiguration implements IXMLConverter{
 	
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * The percentage chance two chromosomes are crossed over at evolution stage
-	 */
-	private int crossoverRate = -1;
-	
-	/**
-	 * The chance a chromosome has to mutate, = 1/mutationRate
-	 */
-	private int mutationRate = -1;
     private World world;
 
     /**
@@ -81,8 +71,8 @@ public class GAConfiguration extends DefaultConfiguration implements IXMLConvert
 
 
             //Replace operators with tree operators
-            getGeneticOperators().set(0, new CompositeGeneTreeCrossoverOperator(this, 80));
-            getGeneticOperators().set(1, new CompositeGeneTreeMutationOperator(this, 1));
+            getGeneticOperators().set(0, new CompositeGeneTreeCrossoverOperator(this, SimulationSettings.crossoverRate));
+            getGeneticOperators().set(1, new CompositeGeneTreeMutationOperator(this, -1));
 
 			//if (crossoverRate != -1)
 			//	setCrossoverRate(crossoverRate);
@@ -99,8 +89,8 @@ public class GAConfiguration extends DefaultConfiguration implements IXMLConvert
 	public String toXML() {
 		StringBuilder xml = new StringBuilder();
 		xml.append("<GAEngine>\n");
-		xml.append("<CrossoverRate>" + crossoverRate + "</CrossoverRate>\n");
-		xml.append("<MutationRate>" + mutationRate + "</MutationRate>\n");
+		//xml.append("<CrossoverRate>" + crossoverRate + "</CrossoverRate>\n");
+		//xml.append("<MutationRate>" + mutationRate + "</MutationRate>\n");
 		xml.append("</GAEngine>\n");
 		return xml.toString();
 	}

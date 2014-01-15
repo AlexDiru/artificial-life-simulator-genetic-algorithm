@@ -45,7 +45,7 @@ public class WorldGenerationSettings implements IXMLConverter, Serializable {
 	}
 	
 	public WorldGenerationSettings() {
-		this(50,50,200,50,25,0,0,true);
+		this(50,50,200,50,25,10,0,false);
 	}
 
 	public int getOpenSteps() {

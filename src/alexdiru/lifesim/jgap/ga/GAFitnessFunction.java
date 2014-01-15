@@ -1,6 +1,6 @@
 package alexdiru.lifesim.jgap.ga;
 
-import org.jgap.FitnessFunction;
+import org.jgap .FitnessFunction;
 import org.jgap.IChromosome;
 
 import alexdiru.lifesim.main.World;

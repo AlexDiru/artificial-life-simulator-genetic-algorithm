@@ -19,17 +19,17 @@ public class DecisionNode {
 	/**
 	 * Number of unique conditions the life form can execute
 	 */
-	public static int CONDITION_NUMBER = 3;
+	public static int CONDITION_NUMBER = 7;
 
 	/**
 	 * Number of unique actions the life form can execute
 	 */
-	public static int ACTION_NUMBER = 0;
+	public static int ACTION_NUMBER = 1;
 
 	/**
 	 * Number of unique terminal functions the life form can execute
 	 */
-	public static int TERMINAL_NUMBER = 3;
+	public static int TERMINAL_NUMBER = 4;
 
 	/**
 	 * The left child node of this node
@@ -133,9 +133,17 @@ public class DecisionNode {
                     return lifeForm.isFoodOnLeft();
                 else if (function == 2)
                     return lifeForm.isFoodOnRight();
+                else if (function == 3)
+                    return lifeForm.isFacingPoison();
+                else if (function == 4)
+                    return lifeForm.isPoisonOnLeft();
+                else if (function == 5)
+                    return lifeForm.isPoisonOnRight();
+                else if (function == 6)
+                    return lifeForm.canReachFood();
             } else if (type == DecisionNodeType.ACTION) {
-                /*if (function == 0)
-                    lifeForm.watch();
+                if (function == 0)
+                    lifeForm.watch();/*
                 else if (function == 1)
                     lifeForm.setTargetItemToClosestFood();*/
             } else if (type == DecisionNodeType.TERMINAL) {
@@ -144,7 +152,10 @@ public class DecisionNode {
                 else if (function == 1)
                     lifeForm.turnLeft();
                 else if (function == 2)
-                    lifeForm.turnRight();/*
+                    lifeForm.turnRight();
+                else if (function == 3)
+                    lifeForm.reachForFood();
+                    /*
                 else if (function == 1)
                     lifeForm.moveBackward();
                 else if (function == 2)
@@ -165,14 +176,27 @@ public class DecisionNode {
 	}
 
 	private String getFunctionName() {
+        if (isRedundant())
+            return "REDUNDANT";
+
 		if (type == DecisionNodeType.CONDITION) {
-			if (function == 0)
-				return "isFacingFood()";
-			else if (function == 1)
-				return "isFoodOnLeft()";
-			else if (function == 2)
-				return "isFoodOnRight()";
+            if (function == 0)
+                return "isFacingFood?";
+            else if (function == 1)
+                return "isFoodOnLeft?";
+            else if (function == 2)
+                return "isFoodOnRight?";
+            else if (function == 3)
+                return "isFacingPoison?";
+            else if (function == 4)
+                return "isPoisonOnLeft?";
+            else if (function == 5)
+                return "isPoisonOnRight?";
+            else if (function == 6)
+                return "canReachFood?";
 		} else if (type == DecisionNodeType.ACTION) {
+            if (function == 0)
+                return "watch()";
 		} else if (type == DecisionNodeType.TERMINAL) {
 			if (function == 0)
 				return "moveForward()";
@@ -180,6 +204,8 @@ public class DecisionNode {
                 return "turnLeft()";
             else if (function == 2)
                 return "turnRight()";
+            else if (function == 3)
+                return "reachForFood()";
             /*
 			else if (function == 4)
 				return "backwardTurnLeft()";
@@ -191,6 +217,10 @@ public class DecisionNode {
 
 		return function + "";
 	}
+
+    int getFunction() {
+        return function;
+    }
 
 	public void setLeft(DecisionNode left) {
 		this.left = left;
@@ -220,6 +250,7 @@ public class DecisionNode {
     }
 
     public void mutate(RandomGenerator generator) {
+        System.out.println("hi");
         int r = generator.nextInt(3);
         if (r == 0) {
             type = DecisionNodeType.CONDITION;

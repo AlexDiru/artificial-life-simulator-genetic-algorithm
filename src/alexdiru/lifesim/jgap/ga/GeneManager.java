@@ -28,8 +28,8 @@ public class GeneManager {
 
     private static boolean IS_TILE_BASED = true;
 
-    public static int TREE_NODE_DEPTH = 7;
-	public static int TREE_NODE_SIZE = (int)Math.pow(2,7) - 1;
+    public static int TREE_NODE_DEPTH = 4;
+	public static int TREE_NODE_SIZE = (int)Math.pow(2,4) - 1;
     public static final int BEHAVIOUR_TREE_INDEX = 6;
 
 	public static void saveToFile(String filePath, Gene[] genes) {

@@ -60,17 +60,16 @@ public class CATBehaviourTree {
 
 
 
-		int index = 1;
+        int index = 1;
         nodes.get(0).setDepth(0);
-		for (int n = 0; n < Math.pow(2, GeneManager.TREE_NODE_DEPTH - 1) - 1;  n++) {
-			nodes.get(n).setLeft(nodes.get(index));
+        for (int n = 0; n < Math.pow(2, GeneManager.TREE_NODE_DEPTH - 1) - 1;  n++) {
+            nodes.get(n).setLeft(nodes.get(index));
             nodes.get(index).setDepth(nodes.get(n).getDepth() + 1);
             index++;
-			nodes.get(n).setRight(nodes.get(index));
+            nodes.get(n).setRight(nodes.get(index));
             nodes.get(index).setDepth(nodes.get(n).getDepth() + 1);
             index++;
-
-		}
+        }
 
         CATBehaviourTree tree = new CATBehaviourTree(nodes.get(0));
 		return tree;
@@ -213,14 +212,17 @@ public class CATBehaviourTree {
         treeA.markRedundantNodes();
         treeB.markRedundantNodes();
 
-        List<DecisionNode> nodesA = treeA.convertToNodes();
-        List<DecisionNode> nodesB = treeB.convertToNodes();
+        //List<DecisionNode> nodesA = treeA.convertToNodes();
+        //List<DecisionNode> nodesB = treeB.convertToNodes();
 
         DecisionNode crossoverA;
         DecisionNode crossoverB;
 
-        crossoverA = nodesA.get(generator.nextInt(nodesA.size()));
-        crossoverB = nodesB.get(generator.nextInt(nodesB.size()));
+        crossoverA = treeA.getRandomNonRedundantNode(generator);//nodesA.get(generator.nextInt(nodesA.size()));
+        if (mutation)
+            crossoverB = treeB.root;
+        else
+            crossoverB = treeB.getRandomNonRedundantNode(generator);//nodesB.get(generator.nextInt(nodesB.size()));
 
 
         DecisionNode parentA = crossoverA.getParent();
@@ -240,25 +242,131 @@ public class CATBehaviourTree {
         else
             parentB.setRight(crossoverA);
 
-        treeA.toCompositeGene(a.getConfiguration(), nodesA, a, generator);
-        treeB.toCompositeGene(b.getConfiguration(), nodesB, b, generator);
 
-        //Trim trees
+        treeA.removeRedundantNodes();
+        treeA.toCompositeGene(a.getConfiguration(), treeA.convertToNodes(), a, generator);
 
+        //If a mutation operation, then tree b is just a temporary created tree to swap with tree a and it will be
+        //discarded after the mutation operation thus it's pointless to do any processing
+        if (!mutation) {
+            treeB.removeRedundantNodes();
+            treeB.toCompositeGene(b.getConfiguration(), treeB.convertToNodes(), b, generator);
+        }
     }
 
     void toCompositeGene(Configuration configuration, List<DecisionNode> nodes, ICompositeGene original, RandomGenerator generator) {
         if (nodes == null)
             nodes = convertToNodes();
 
-        for (int i = 0; i < nodes.size(); i++)
-            original.setGene(i,nodes.get(i).toIntegerGene());
+        for (int i = 0; i < original.size(); i++) {
+            if (i < nodes.size())
+                original.setGene(i,nodes.get(i).toIntegerGene());
+
+        }
     }
 
     private void markRedundantNodes() {
         markRedundantNodes(root);
     }
 
+    private void removeRedundantNodes() {
+        removeRedundantNodes(root, new ConditionStack());
+    }
+
+    private void removeRedundantNodes(DecisionNode currentRoot, ConditionStack conditionStack) {
+
+        //If this node is a condition, if it exists, it's a duplicate so we replace this with the left or right child
+        if (currentRoot.getType() == DecisionNodeType.CONDITION) {
+            ConditionEvaluation conditionEvaluation = conditionStack.getCondition(currentRoot.getFunction());
+
+            System.out.println(conditionEvaluation);
+
+            //Doesn't exist so evaluate left and right children with the according value
+            if (conditionEvaluation == null) {
+                //Left (true branch)
+                conditionStack.addCondition(currentRoot.getFunction(), true);
+                if (currentRoot.getLeft() != null)
+                    removeRedundantNodes(currentRoot.getLeft(), conditionStack);
+
+                conditionStack.inverseLatestCondition();
+                if (currentRoot.getRight() != null)
+                    removeRedundantNodes(currentRoot.getRight(), conditionStack);
+
+                conditionStack.pop();
+            }
+            //The condition exists and a result has already been calculated so one branch of the current condition is pointless (as is this condition - no need to evaluate twice)
+            else {
+                if (conditionEvaluation.getConditionResult()) {
+                    //Right branch is never going to be used
+                    //So replace this node with the left child
+
+                    //If no parent, then root node, so just mark as redundant
+                    if (currentRoot.getParent() == null)
+                        currentRoot.markAsRedundant();
+                        //If the left child doesn't exist, then we just need to remove this node
+                    else if (currentRoot.getLeft() == null) {
+                        //Mark the node as redundant (from the parent node)
+                        if (currentRoot.getParent().getLeft() == currentRoot)
+                            currentRoot.getParent().getLeft().markAsRedundant();
+                        else //if (currentRoot.getParent().getRight() == currentRoot)
+                            currentRoot.getParent().getRight().markAsRedundant();
+                    }
+                    //Otherwise replace this node with the left child
+                    else {
+                        if (currentRoot.getParent().getLeft() == currentRoot)
+                            currentRoot.getParent().setLeft(currentRoot.getLeft());
+                        else
+                            currentRoot.getParent().setRight(currentRoot.getLeft());
+                    }
+
+                } else {
+                    //Left branch is never going to be used
+                    //So replace this node with the right child
+
+                    //If no parent, then root node, so just mark as redundant
+                    if (currentRoot.getParent() == null)
+                        currentRoot.markAsRedundant();
+                    //If the left child doesn't exist, then we just need to remove this node
+                    else if (currentRoot.getLeft() == null) {
+                        //Mark the node as redundant (from the parent node)
+                        if (currentRoot.getParent().getLeft() == currentRoot)
+                            currentRoot.getParent().getLeft().markAsRedundant();
+                        else //if (currentRoot.getParent().getRight() == currentRoot)
+                            currentRoot.getParent().getRight().markAsRedundant();
+                    }
+                    //Otherwise replace this node with the right child
+                    else {
+                        if (currentRoot.getParent().getLeft() == currentRoot)
+                            currentRoot.getParent().setLeft(currentRoot.getRight());
+                        else
+                            currentRoot.getParent().setRight(currentRoot.getRight());
+                    }
+
+                }
+
+
+                //Evaluate child nodes
+                if (currentRoot.getLeft() != null && !currentRoot.getLeft().isRedundant())
+                    removeRedundantNodes(currentRoot.getLeft(), conditionStack);
+                if (currentRoot.getRight() != null && !currentRoot.getRight().isRedundant())
+                    removeRedundantNodes(currentRoot.getRight(), conditionStack);
+
+            }
+        } else {
+
+
+        //Evaluate child nodes
+        if (currentRoot.getLeft() != null && !currentRoot.getLeft().isRedundant())
+            removeRedundantNodes(currentRoot.getLeft(), conditionStack);
+        if (currentRoot.getRight() != null && !currentRoot.getRight().isRedundant())
+            removeRedundantNodes(currentRoot.getRight(), conditionStack);
+        }
+    }
+
+    /**
+     * Marks nodes which will never be reached (i.e. both children of a terminal node, or the right child of an action node
+     * @param root
+     */
     private void markRedundantNodes(DecisionNode root) {
         if (root.getType() == DecisionNodeType.TERMINAL) {
             if (root.getLeft() != null)
@@ -283,11 +391,27 @@ public class CATBehaviourTree {
         return g;
     }
 
+    /**
+     * Converts the decision tree into a list of nodes
+     * @return The list of nodes
+     */
     public List<DecisionNode> convertToNodes() {
+        updateNodeDepths(root, 0);
         List<DecisionNode> nodes = new ArrayList<DecisionNode>();
         nodes.add(root);
         nodes.addAll(CATBehaviourTree.convertToNodes(root));
         return nodes;
+    }
+
+    /**
+     * Recalculates the depth values of the nodes in the tree
+     */
+    private void updateNodeDepths(DecisionNode root, int depth) {
+        root.setDepth(depth);
+        if (root.getLeft() != null)
+            updateNodeDepths(root.getLeft(), depth+1);
+        if (root.getRight() != null)
+            updateNodeDepths(root.getRight(), depth+1);
     }
 
     /**
@@ -309,6 +433,10 @@ public class CATBehaviourTree {
         if (root.getRight() != null)
             nodes.addAll(convertToNodes(root.getRight()));
 
+        //Remove all nodes over a certain depth
+
+        //
+
         //Sort nodes by depth to get Level traversal
         Collections.sort(nodes, new Comparator<DecisionNode>() {
             @Override
@@ -328,5 +456,20 @@ public class CATBehaviourTree {
     public void setRoot(DecisionNode root) {
         this.root = root;
         root.setParent(null);
+    }
+
+    public DecisionNode getRandomNonRedundantNode(RandomGenerator generator) {
+        List<DecisionNode> nodes = convertToNodes();
+        int length = nodes.size();
+
+        while (length > 1)
+        {
+            DecisionNode node = nodes.get(generator.nextInt(length));
+            if (!node.isRedundant())
+                return node;
+            length /= 2;
+        }
+
+        return nodes.get(0);
     }
 }

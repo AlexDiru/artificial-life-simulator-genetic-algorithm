@@ -2,16 +2,24 @@ package alexdiru.lifesim.main;
 
 import java.util.ArrayList;
 
+/**
+ * A dataset which holds the fitness values (one fitness value per start position) that a life form has
+ * each generation. It provides functions to generate a final fitness value for the life form accounting
+ * for all the fitness values in the life form's generation
+ */
 public class LifeFormDataset {
-	
-	private static final int MAX_USED_ENERGY = 20000;
 
+    /**
+     * A list of the fitness values the life form has accumilated in the current generation
+     */
 	private ArrayList<Float> fitnessValues = new ArrayList<Float>();
-	
+
+    /**
+     * Adds
+     * @param stamina
+     * @param usedEnergy
+     */
 	public void addData(float stamina, int usedEnergy) {
-		int leftoverEnergy = MAX_USED_ENERGY - usedEnergy;
-		if (leftoverEnergy < 0)
-			leftoverEnergy = 0;
 		fitnessValues.add(stamina);
 	}
 	

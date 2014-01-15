@@ -68,6 +68,8 @@ public class ConcurrentBreeder extends GABreeder {
             return;
         }
 
+        System.out.println(a_pop.size());
+
         //Estimate the size of the population subset each thread will use
         int popSize = a_pop.size()/numThreads;
 

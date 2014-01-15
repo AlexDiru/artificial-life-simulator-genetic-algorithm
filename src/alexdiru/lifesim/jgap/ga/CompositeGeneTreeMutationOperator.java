@@ -1,5 +1,6 @@
 package alexdiru.lifesim.jgap.ga;
 
+import alexdiru.lifesim.main.SimulationSettings;
 import org.jgap.*;
 import org.jgap.data.config.Configurable;
 import org.jgap.impl.MutationOperator;
@@ -29,6 +30,7 @@ public class CompositeGeneTreeMutationOperator extends MutationOperator implemen
 
     public ICompositeGene mutateCompositeGene(ICompositeGene a_gene, final RandomGenerator a_generator) {
         ICompositeGene randomMutation = GeneManager.generateRandomBehaviourTree(a_gene.getConfiguration(), a_generator);
+        System.out.println("mutating");
         CATBehaviourTree.crossover(a_gene, randomMutation, a_generator,true);
         return a_gene;
     }
@@ -40,5 +42,22 @@ public class CompositeGeneTreeMutationOperator extends MutationOperator implemen
             gene = mutateCompositeGene((ICompositeGene)gene, generator);
         else
             mutateGene(gene, generator);
+    }
+
+
+    /**
+     * Determines whether a gene is mutated
+     * @param geneIndex
+     */
+    public boolean isMutationSuccessful(final RandomGenerator generator, int geneIndex) {
+        int mutationRate;
+        if (geneIndex < GeneManager.BEHAVIOUR_TREE_INDEX)
+            mutationRate = SimulationSettings.senseMutationRate;
+        else
+            mutationRate = SimulationSettings.behaviourMutationRate;
+
+        float prob = 1f/mutationRate;
+
+        return (generator.nextFloat() < prob);
     }
 }

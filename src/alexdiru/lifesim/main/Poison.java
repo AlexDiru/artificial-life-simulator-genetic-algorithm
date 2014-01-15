@@ -28,7 +28,7 @@ public class Poison extends Item implements Serializable, IClone {
 
     public Poison(int xPosition, int yPosition) {
 		super(xPosition, yPosition);
-		staminaReductionValue = 3000;
+		staminaReductionValue = 50;
 		restartStaminaValue = staminaReductionValue;
 	}
 

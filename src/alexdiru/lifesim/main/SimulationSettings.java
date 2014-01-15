@@ -18,4 +18,22 @@ public class SimulationSettings {
 	public static int populationSize = 50;
 
 	public static int maxGeneration = 10000;
+
+    //public static boolean automaticallyPickupFood = true;
+
+
+    /**
+     * The percentage chance two chromosomes are crossed over at evolution stage
+     */
+    public static int crossoverRate = 60;
+
+    /**
+     * The chance a chromosome has for it's senses to mutate (regular gene mutation), = 1/mutationRate
+     */
+    public static int senseMutationRate = 8;
+
+    /**
+     * The chance a chromosome has for it's behaviour to mutate = 1/mutationRate
+     */
+    public static int behaviourMutationRate = 5;
 }

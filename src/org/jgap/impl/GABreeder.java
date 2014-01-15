@@ -182,9 +182,6 @@ public class GABreeder
           a_conf.getGenerationNr(), new Object[] {pop});
     }
 
-    if (this instanceof ConcurrentBreeder)
-        ((ConcurrentBreeder)this).updateChromosomesConcurrently(pop,a_conf);
-      else
         updateChromosomes(pop, a_conf);
     if (monitorActive) {
       // Monitor that fitness value of chromosomes is being updated.
@@ -310,6 +307,13 @@ public class GABreeder
   }
 
   protected void updateChromosomes(Population a_pop, Configuration a_conf) {
+
+
+    if (this instanceof ConcurrentBreeder){
+          ((ConcurrentBreeder)this).updateChromosomesConcurrently(a_pop,a_conf);
+        return;
+    }
+
     int currentPopSize = a_pop.size();
     // Ensure all chromosomes are updated.
     // -----------------------------------

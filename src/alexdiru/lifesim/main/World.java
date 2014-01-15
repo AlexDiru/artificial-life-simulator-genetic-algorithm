@@ -188,7 +188,7 @@ public class World implements Serializable {
 	 */
 	private void prepareNewPosition(LifeForm currentLifeForm) {
 		currentLifeForm.restart();
-		currentLifeForm.onSimulateNextPosition(simulationStartPositions.get(0));
+		currentLifeForm.onSimulateNextPosition(simulationStartPositions.get(simulationStartPosition));
 		//gui.getApplicationListener().centreMapOn(currentLifeForm);
 	}
 
