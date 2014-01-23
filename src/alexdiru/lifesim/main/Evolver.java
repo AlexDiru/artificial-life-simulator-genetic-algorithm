@@ -24,7 +24,7 @@ public class Evolver implements Runnable {
 
     private World world;
 
-    /**
+   /**
      * Stores the number of life forms simulated in the current generation
      * Since the simulation is multi-threaded this must be atomic
      */
@@ -60,10 +60,11 @@ public class Evolver implements Runnable {
     public Evolver(GUI gui) {
         this.gui = gui;
         world = new World(gui, this);
-        geneticEngine = new GAEngine(this, world);
+        //geneticEngine = new GAEngine(this, world);
     }
 
     public void reset() {
+        geneticEngine = new GAEngine(this, world);
         geneticEngine.setup();
         dataset.reset();
         currentGeneration = 1;

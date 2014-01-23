@@ -65,6 +65,9 @@ fff	 * The angle the life form is facing
 	private double fitness = 0;
     private IChromosome chromosome;
 
+    private static int MAX_THIRST = 75;
+    private int thirst = MAX_THIRST;
+
     /**
 	 * Creates the life form
 	 * @param world The simulation world the life form belongs to

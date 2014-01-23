@@ -1,13 +1,12 @@
 package alexdiru.lifesim.main;
 import java.awt.*;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.lang.*;
 import java.util.ArrayList;
 import java.util.Random;
 
 import alexdiru.lifesim.enums.WorldGenerationMethod;
+import org.apache.commons.io.FileUtils;
 import org.jgap.IChromosome;
 
 import javax.xml.stream.XMLInputFactory;
@@ -142,6 +141,8 @@ public class World implements Serializable {
 		obstacles.clear();
 		items.clear();
 		waters.clear();
+        if (simulationStartPositions != null)
+            simulationStartPositions.clear();
 	}
 	
 	/**
@@ -204,7 +205,7 @@ public class World implements Serializable {
         simulationStartPosition = 0;
 		long previousTime =  System.currentTimeMillis();
 		while (!breakLoop && !evolver.getGeneticEngine().isStopSimulation())
-            while (simulationSpeed >= 1000 || System.currentTimeMillis() > previousTime + (1000/simulationSpeed)) {
+            while ((simulationSpeed >= 1000 || System.currentTimeMillis() > previousTime + (1000/simulationSpeed))) {
             	if (!simulationPaused) {
 					currentLifeForm.update();
                     localElapsedCycles++;
@@ -255,9 +256,11 @@ public class World implements Serializable {
         obstacles.clear();
 
         generateFoodAndPoison(generationSettings.getPercentageOfFood(), generationSettings.getPercentageOfPoison(), generationSettings.getTileBasedDistribution());
-        generateWater(generationSettings.getPercentageOfWater());
+        generateWater(generationSettings.getPercentageOfWater(), true);
 
         setupSimulationPositions();
+
+        save("C:/Users/Alex/Desktop/testmap.xml");
     }
 
 
@@ -265,11 +268,14 @@ public class World implements Serializable {
      * Adds random water to the map
      * @param percentage The density of the water
      */
-    private void generateWater(int percentage) {
+    private void generateWater(int percentage, boolean tileBasedDistribution) {
         for (int x = 0; x < xTileSize; x++)
             for (int y = 0; y < yTileSize; y++)
                 if (random.nextInt(100) < percentage)
-                    waters.add(new Water(x,y));
+                    if (tileBasedDistribution)
+                        waters.add(new Water(random.nextInt(xTileSize) *Renderer.TILE_SIZE,random.nextInt(yTileSize) *Renderer.TILE_SIZE));
+                    else
+                        waters.add(new Water(random.nextInt(xTileSize * Renderer.TILE_SIZE), random.nextInt(yTileSize * Renderer.TILE_SIZE)));
     }
 
     /**
@@ -328,7 +334,7 @@ public class World implements Serializable {
         }
 
         generateFoodAndPoison(settings.getPercentageOfFood(), settings.getPercentageOfPoison(), settings.getTileBasedDistribution());
-        generateWater(settings.getPercentageOfWater());
+        generateWater(settings.getPercentageOfWater(), true);
 
         setupSimulationPositions();
 
@@ -391,8 +397,7 @@ public class World implements Serializable {
                             streamReader.getLocalName().equals("water") ||
                             streamReader.getLocalName().equals("food") ||
                             streamReader.getLocalName().equals("poison") ||
-                            streamReader.getLocalName().equals("lifeform") ||
-                            streamReader.getLocalName().equals("lilypad")) {
+                            streamReader.getLocalName().equals("start")) {
 
                         //Read the coordinates and split them by the comma
                         String xyCoordinates = streamReader.getElementText();
@@ -402,18 +407,20 @@ public class World implements Serializable {
                         if (xyCoordinatesSplit.length == 2) {
                             //Get the coordinates from the comma separated string
                             try {
-                                int x = Integer.parseInt(xyCoordinatesSplit[0]);
-                                int y = Integer.parseInt(xyCoordinatesSplit[1]);
+                                double x = Double.parseDouble(xyCoordinatesSplit[0]);
+                                double y = Double.parseDouble(xyCoordinatesSplit[1]);
 
                                 //Add the object from the coordinates
                                 if (streamReader.getLocalName().equals("obstacle"))
-                                    obstacles.add(new Obstacle(x,y));
+                                    obstacles.add(new Obstacle((int)x,(int)y));
                                 else if (streamReader.getLocalName().equals("water"))
-                                    waters.add(new Water(x,y));
-                                //else if (streamReader.getLocalName().equals("poison"))
-                                 //   items.add(new Poison(x,y));
-                                //else if (streamReader.getLocalName().equals("food"))
-                                  //  items.add(new Food(x,y));
+                                    waters.add(new Water((int)x,(int)y));
+                                else if (streamReader.getLocalName().equals("poison"))
+                                    items.add(new Poison((int)x,(int)y));
+                                else if (streamReader.getLocalName().equals("food"))
+                                    items.add(new Food((int)x,(int)y));
+                                else if (streamReader.getLocalName().equals("start"))
+                                    simulationStartPositions.add(new Point((int)x,(int)y));
                             } catch (NumberFormatException ex) {
                                 errorMessage += "Object coordinates must be an integers\n";
                             }
@@ -438,6 +445,26 @@ public class World implements Serializable {
         postMapGenerationSetup();
 
         return true;
+    }
+
+    public void save(String mapFile) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<map xsize=\"").append(xTileSize).append("\" ysize=\"").append(yTileSize).append("\">\n");
+        for (Item item : items) {
+            if (item instanceof Food)
+                sb.append("\t<food>").append(item.xPosition).append(",").append(item.yPosition).append("</food>\n");
+            else if (item instanceof Poison)
+                sb.append("\t<poison>").append(item.xPosition).append(",").append(item.yPosition).append("</poison>\n");
+        }
+        for (Point p : simulationStartPositions)
+            sb.append("\t<start>").append(p.x).append(",").append(p.y).append("</start>\n");
+        sb.append("</map>");
+
+        try {
+            FileUtils.write(new File(mapFile), sb.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //Returns the obstacles on the map
@@ -590,5 +617,13 @@ public class World implements Serializable {
         world.simulationStartPosition = simulationStartPosition;
         world.render = false;
         return world;
+    }
+
+    public Evolver getEvolver() {
+        return evolver;
+    }
+
+    public void setEvolver(Evolver evolver) {
+        this.evolver = evolver;
     }
 }

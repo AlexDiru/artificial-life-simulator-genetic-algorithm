@@ -69,7 +69,6 @@ public class GAConfiguration extends DefaultConfiguration implements IXMLConvert
 
 
 
-
             //Replace operators with tree operators
             getGeneticOperators().set(0, new CompositeGeneTreeCrossoverOperator(this, SimulationSettings.crossoverRate));
             getGeneticOperators().set(1, new CompositeGeneTreeMutationOperator(this, -1));

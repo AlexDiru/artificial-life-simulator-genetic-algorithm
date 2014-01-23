@@ -7,38 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c611a2e6-cd93-4554-ac64-5ab1dfed1125" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/jgap/impl/CrossoverOperator.java" afterPath="$PROJECT_DIR$/src/org/jgap/impl/CrossoverOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConcurrentBreeder.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConcurrentBreeder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/swingcomp/CreateNewWorldPanel.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/swingcomp/CreateNewWorldPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/Evolver.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/Evolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/jgap/impl/GABreeder.java" afterPath="$PROJECT_DIR$/src/org/jgap/impl/GABreeder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConcurrentFitnessFunction.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConcurrentFitnessFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/GUI.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/GUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/Water.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/Water.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="life-simulation.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Geometry.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1380725312877" ignored="false" />
     <file path="/.project" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1380725366417" ignored="false" />
     <file path="/Program.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385726927009" ignored="false" />
-    <file path="/CreateNewWorldPanel.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1380725731139" ignored="false" />
+    <file path="/CreateNewWorldPanel.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390476690236" ignored="false" />
     <file path="/fragment.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387396722669" ignored="false" />
     <file path="/GeneManager.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387629022393" ignored="false" />
-    <file path="/GUI.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403799980" ignored="false" />
+    <file path="/GUI.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390475690979" ignored="false" />
     <file path="/IGeneticEngine.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385292350732" ignored="false" />
-    <file path="/GAEngine.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387454271021" ignored="false" />
-    <file path="/World.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389809798421" ignored="false" />
+    <file path="/GAEngine.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390475712979" ignored="false" />
+    <file path="/World.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390476730661" ignored="false" />
     <file path="/IWorld.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385293885626" ignored="false" />
-    <file path="/LifeForm.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389967423754" ignored="false" />
+    <file path="/LifeForm.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390472842962" ignored="false" />
     <file path="/Dummy.txt" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390471722497" ignored="false" />
     <file path="/GeneManagerTest.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386025432986" ignored="false" />
     <file path="/a.dummy" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389807734076" ignored="false" />
     <file path="/DecisionNode.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390086495701" ignored="false" />
     <file path="/CATBehaviourTree.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390086187622" ignored="false" />
-    <file path="/GAConfiguration.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389716119472" ignored="false" />
+    <file path="/GAConfiguration.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390474015615" ignored="false" />
     <file path="/NameableIntegerGene.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385728555518" ignored="false" />
     <file path="/SimulationSummaryPanel.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385855136853" ignored="false" />
     <file path="/GenerationDataset.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385811801316" ignored="false" />
@@ -66,8 +65,8 @@
     <file path="/IClone.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386023627931" ignored="false" />
     <file path="/CloneHelper.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386023559566" ignored="false" />
     <file path="/Object2D.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403280371" ignored="false" />
-    <file path="/Evolver.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389808094973" ignored="false" />
-    <file path="/Water.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403314480" ignored="false" />
+    <file path="/Evolver.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390475537190" ignored="false" />
+    <file path="/Water.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1390472993473" ignored="false" />
     <file path="/Item.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403264080" ignored="false" />
     <file path="/Food.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403249896" ignored="false" />
     <file path="/Poison.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403301139" ignored="false" />
@@ -177,55 +176,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LifeForm.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java">
+      <file leaf-file-name="WorldGenerationSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/WorldGenerationSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="10" selection-start="8863" selection-end="8863" vertical-scroll-proportion="0.0">
+            <state line="105" column="1" selection-start="2790" selection-end="2790" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompositeGeneTreeCrossoverOperator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java">
+      <file leaf-file-name="World.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
+            <state line="444" column="33" selection-start="16374" selection-end="16374" vertical-scroll-proportion="0.8525755">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CATBehaviourTree.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java">
+      <file leaf-file-name="ConcurrentBreeder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConcurrentBreeder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="53" selection-start="5071" selection-end="5071" vertical-scroll-proportion="0.45235223">
+            <state line="53" column="12" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConditionStack.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConditionStack.java">
+      <file leaf-file-name="GUI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="5" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+            <state line="345" column="18" selection-start="12614" selection-end="12621" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DecisionNode.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java">
+      <file leaf-file-name="CreateNewWorldPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/swingcomp/CreateNewWorldPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="24" selection-start="1293" selection-end="1295" vertical-scroll-proportion="-25.4">
+            <state line="293" column="53" selection-start="11323" selection-end="11323" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10001#11341#0" expanded="true" />
+                <element signature="e#11336#11337#0" expanded="true" />
+                <element signature="e#12107#12852#0" expanded="true" />
+                <element signature="e#12847#12848#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Evolver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/Evolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="0" selection-start="1006" selection-end="1006" vertical-scroll-proportion="-0.6">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrossoverOperator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/jgap/impl/CrossoverOperator.java">
+      <file leaf-file-name="Thread.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="56" selection-start="11745" selection-end="11745" vertical-scroll-proportion="0.0">
+            <state line="734" column="40" selection-start="27211" selection-end="27211" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,34 +248,25 @@
       <file leaf-file-name="GAConfiguration.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="72" selection-start="2130" selection-end="2130" vertical-scroll-proportion="0.0">
+            <state line="48" column="0" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompositeGeneTreeMutationOperator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java">
+      <file leaf-file-name="GAEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="67" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
+            <state line="162" column="0" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java">
+      <file leaf-file-name="CreateNewSimulationPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/swingcomp/CreateNewSimulationPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="41" selection-start="5624" selection-end="5624" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimulationSettings.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="46" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0">
+            <state line="9" column="13" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -285,22 +290,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConditionStack.java" />
-        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java" />
-        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConcurrentBreeder.java" />
-        <option value="$PROJECT_DIR$/src/org/jgap/impl/GABreeder.java" />
-        <option value="$PROJECT_DIR$/src/org/jgap/BreederBase.java" />
-        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java" />
-        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/Evolver.java" />
-        <option value="$PROJECT_DIR$/src/org/jgap/Chromosome.java" />
         <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConcurrentFitnessFunction.java" />
-        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" />
-        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java" />
         <option value="$PROJECT_DIR$/src/org/jgap/impl/CrossoverOperator.java" />
         <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java" />
         <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java" />
         <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java" />
         <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/Water.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/WorldGenerationSettings.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/Evolver.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConcurrentBreeder.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/GUI.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/swingcomp/CreateNewWorldPanel.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" />
       </list>
     </option>
   </component>
@@ -389,32 +394,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jgap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="life-simulation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="life-simulation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jgap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -431,6 +410,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lifesim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swingcomp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -475,6 +458,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifesim" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -860,20 +861,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17022412" sideWeight="0.68186873" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31709957" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16755603" sideWeight="0.6829811" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3170189" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67964405" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -947,104 +948,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/jgap/Chromosome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="534" column="32" selection-start="20815" selection-end="20839" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="37" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConcurrentFitnessFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="32" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/jgap/BaseChromosome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="373" column="51" selection-start="9939" selection-end="9939" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/jgap/impl/MutationOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="26" selection-start="7677" selection-end="7677" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="30" selection-start="1226" selection-end="2537" vertical-scroll-proportion="-13.24">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="72" selection-start="2130" selection-end="2130" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="10" selection-start="8863" selection-end="8863" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="41" selection-start="5624" selection-end="5624" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/jgap/impl/CrossoverOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="56" selection-start="11745" selection-end="11745" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="46" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConditionStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="67" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="24" selection-start="1293" selection-end="1295" vertical-scroll-proportion="-25.4">
@@ -1054,7 +957,111 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="53" selection-start="5071" selection-end="5071" vertical-scroll-proportion="0.45235223">
+        <state line="171" column="26" selection-start="5666" selection-end="5666" vertical-scroll-proportion="-24.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="11" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/Poison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="10" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="290" column="11" selection-start="8902" selection-end="8905" vertical-scroll-proportion="-7.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/Water.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="734" column="40" selection-start="27211" selection-end="27211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/WorldGenerationSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="1" selection-start="2790" selection-end="2790" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/swingcomp/CreateNewSimulationPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="0" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/ConcurrentBreeder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="12" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/Evolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1006" selection-end="1006" vertical-scroll-proportion="-0.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="345" column="18" selection-start="12614" selection-end="12621" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/swingcomp/CreateNewWorldPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="293" column="53" selection-start="11323" selection-end="11323" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10001#11341#0" expanded="true" />
+            <element signature="e#11336#11337#0" expanded="true" />
+            <element signature="e#12107#12852#0" expanded="true" />
+            <element signature="e#12847#12848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="444" column="33" selection-start="16374" selection-end="16374" vertical-scroll-proportion="0.8525755">
           <folding />
         </state>
       </provider>

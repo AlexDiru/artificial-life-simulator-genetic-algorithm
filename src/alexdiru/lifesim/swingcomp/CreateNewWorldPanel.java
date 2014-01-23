@@ -268,18 +268,30 @@ public class CreateNewWorldPanel extends JPanel {
 				if (cerr || eerr)
 					return;
 
-				world.pauseSimulation();
-				
-				WorldGenerationSettings settings = new WorldGenerationSettings();
-				settings.setXSize((Integer)spinnerXSize.getValue());
-				settings.setYSize((Integer)spinnerYSize.getValue());
+                //world.getEvolver().getGeneticEngine().stopSimulation();
+                world.getGui().getEvolverThread().stop();
+
+
+                try {
+                    world.getGui().getEvolverThread().join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+
+                System.out.println("joined");
+
+                WorldGenerationSettings settings = new WorldGenerationSettings();
+				settings.setXSize((Integer) spinnerXSize.getValue());
+				settings.setYSize((Integer) spinnerYSize.getValue());
 				settings.setOpenSteps((Integer)spinnerOpenSteps.getValue());
 				SimulationSettings.populationSize = (Integer)spinnerLifeForms.getValue();
-				settings.setPercentageOfFood((Integer)spinnerFood.getValue());
-				settings.setPercentageOfPoison((Integer)spinnerPoison.getValue());
+				settings.setPercentageOfFood((Integer) spinnerFood.getValue());
+				settings.setPercentageOfPoison((Integer) spinnerPoison.getValue());
 				world.generateWorld(settings, WorldGenerationMethod.EMPTY);
-				
-				world.togglePauseSimulation();
+
+
+                world.getGui().startWorld(true);
+                world.setEvolver(world.getGui().getEvolver());
 			}
 		});
 		
@@ -328,7 +340,7 @@ public class CreateNewWorldPanel extends JPanel {
 		gbc_btnGenerateDrunken.fill = GridBagConstraints.BOTH;
 		gbc_btnGenerateDrunken.gridx = 0;
 		gbc_btnGenerateDrunken.gridy = 10;
-		add(btnGenerateDrunken, gbc_btnGenerateDrunken);
+		//add(btnGenerateDrunken, gbc_btnGenerateDrunken);
 	}
 	
 

@@ -251,11 +251,11 @@ public class GUI extends JFrame {
        //world.generateDrunkenWalkWorld(this,new WorldGenerationSettings());
        
        //The GUI has been created, so start the simulation's thread
-       startWorld();
+       startWorld(false);
     }
 
-    public void startWorld() {
-       if (t != null)
+    public void startWorld(boolean force) {
+       if (t != null && !force)
            return;
        t = new Thread(evolver);
         t.start();
@@ -341,5 +341,9 @@ public class GUI extends JFrame {
         if (showSummaryFrame == null)
             return null;
         return (SimulationSummaryPanel)showSummaryFrame.getContentPane().getComponent(0);
+    }
+
+    public Evolver getEvolver() {
+        return evolver;
     }
 }

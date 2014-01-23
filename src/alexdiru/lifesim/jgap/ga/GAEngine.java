@@ -65,7 +65,7 @@ public class GAEngine implements Serializable {
                 world.getGui().getSimulationSummaryPanel().refreshTable();
 
             stopSimulation = false;
-            world.getGui().startWorld();
+            world.getGui().startWorld(false);
 		} catch (InvalidConfigurationException e) {
 			System.out.println("Genotype failed to create");
 			System.exit(1);
@@ -101,7 +101,7 @@ public class GAEngine implements Serializable {
             world.getGui().getSimulationSummaryPanel().refreshTable();
 
         stopSimulation = false;
-        world.getGui().startWorld();
+        world.getGui().startWorld(false);
     }
 	
 	/**
@@ -194,4 +194,8 @@ public class GAEngine implements Serializable {
 	public Genotype getGenotype() {
 		return gaGenotype;
 	}
+
+    public void stopSimulation() {
+        stopSimulation = true;
+    }
 }

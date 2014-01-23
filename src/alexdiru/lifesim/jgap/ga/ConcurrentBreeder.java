@@ -51,10 +51,7 @@ public class ConcurrentBreeder extends GABreeder {
         fitnessFunctions = new GAConcurrentFitnessFunction[numThreads];
         threads = new Thread[numThreads];
         for (int i = 0; i < numThreads; i++) {
-            if (i == 0)
-                fitnessFunctions[i] = new GAConcurrentFitnessFunction(evolver, world, null, true);
-            else
-                fitnessFunctions[i] = new GAConcurrentFitnessFunction(evolver, world.clone(), null, false);
+            fitnessFunctions[i] = new GAConcurrentFitnessFunction(evolver, world.clone(), null, false);
         }
     }
 
