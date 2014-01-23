@@ -25,15 +25,15 @@ public class SimulationSettings {
     /**
      * The percentage chance two chromosomes are crossed over at evolution stage
      */
-    public static int crossoverRate = 60;
+    public static int crossoverRate = 20;
 
     /**
      * The chance a chromosome has for it's senses to mutate (regular gene mutation), = 1/mutationRate
      */
-    public static int senseMutationRate = 8;
+    public static int senseMutationRate = 4;
 
     /**
      * The chance a chromosome has for it's behaviour to mutate = 1/mutationRate
      */
-    public static int behaviourMutationRate = 5;
+    public static int behaviourMutationRate = 3;
 }

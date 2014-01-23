@@ -120,12 +120,12 @@ public class GAEngine implements Serializable {
 		
 		//Manually reset all population because I don't trust JGAP
 		//resetPopulationFitness(gaGenotype.getConfiguration(), gaGenotype.getPopulation().getChromosomes());
-        for (IChromosome chromosome : gaGenotype.getPopulation().getChromosomes()) {
-            if (chromosome != null) {
-                chromosome.resetOperatedOn();
-                chromosome.setFitnessValueDirectly(FitnessFunction.NO_FITNESS_VALUE);
-            }
-        }
+       // for (IChromosome chromosome : gaGenotype.getPopulation().getChromosomes()) {
+       //     if (chromosome != null) {
+        //        chromosome.resetOperatedOn();
+        //        chromosome.setFitnessValueDirectly(FitnessFunction.NO_FITNESS_VALUE);
+        //    }
+        //}
 
 		//Deterministic without
 

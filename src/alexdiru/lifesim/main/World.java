@@ -119,8 +119,9 @@ public class World implements Serializable {
 		lifeForm = prepareNewLifeForm(chromosome);
 		//Simulate the life form
 		simulateLifeForm(lifeForm);
-		//Return the simulated life form's fitness
 
+        evolver.incrementNumberOfLifeFormsSimulatedThisGeneration();
+		//Return the simulated life form's fitness
 	    return lifeForm.evaluateFitness();
 	}
 	
@@ -180,6 +181,7 @@ public class World implements Serializable {
 		lifeForm.setChromosome(chromosome);
 		simulationStartPosition = 0;
 		prepareNewPosition(lifeForm);
+
         return lifeForm;
 	}
 	

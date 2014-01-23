@@ -155,10 +155,6 @@ public class CATBehaviourTree {
      */
 	public static CATBehaviourTree createFromChromosome(LifeForm lifeForm, IChromosome chromosome) {
 		int index = GeneManager.BEHAVIOUR_TREE_INDEX;
-		/*Gene[] g = chromosome.getGenes()
-		ArrayList<Gene> genes = new ArrayList<Gene>();
-		for (int i = 0; i < GeneManager.TREE_NODE_SIZE; i++)
-			genes.add(g[index + i]);*/
         List<Gene> treeGenes = ((CompositeGene)chromosome.getGenes()[index]).getGenes();
 		return createFromSpecificGenes(lifeForm,treeGenes);// genes);
 	}
@@ -279,7 +275,6 @@ public class CATBehaviourTree {
         if (currentRoot.getType() == DecisionNodeType.CONDITION) {
             ConditionEvaluation conditionEvaluation = conditionStack.getCondition(currentRoot.getFunction());
 
-            System.out.println(conditionEvaluation);
 
             //Doesn't exist so evaluate left and right children with the according value
             if (conditionEvaluation == null) {
@@ -313,10 +308,15 @@ public class CATBehaviourTree {
                     }
                     //Otherwise replace this node with the left child
                     else {
-                        if (currentRoot.getParent().getLeft() == currentRoot)
-                            currentRoot.getParent().setLeft(currentRoot.getLeft());
-                        else
-                            currentRoot.getParent().setRight(currentRoot.getLeft());
+                        if (currentRoot.getParent().getLeft() == currentRoot) {
+                            DecisionNode newNode = currentRoot.getLeft();
+                            currentRoot.getParent().setLeft(newNode);
+                            currentRoot = newNode;
+                        } else {
+                            DecisionNode newNode = currentRoot.getLeft();
+                            currentRoot.getParent().setRight(newNode);
+                            currentRoot = newNode;
+                        }
                     }
 
                 } else {
@@ -336,10 +336,15 @@ public class CATBehaviourTree {
                     }
                     //Otherwise replace this node with the right child
                     else {
-                        if (currentRoot.getParent().getLeft() == currentRoot)
-                            currentRoot.getParent().setLeft(currentRoot.getRight());
-                        else
-                            currentRoot.getParent().setRight(currentRoot.getRight());
+                        if (currentRoot.getParent().getLeft() == currentRoot) {
+                            DecisionNode newNode = currentRoot.getRight();
+                            currentRoot.getParent().setLeft(newNode);
+                            currentRoot = newNode;
+                        } else {
+                            DecisionNode newNode = currentRoot.getRight();
+                            currentRoot.getParent().setRight(newNode);
+                            currentRoot = newNode;
+                        }
                     }
 
                 }
@@ -353,13 +358,11 @@ public class CATBehaviourTree {
 
             }
         } else {
-
-
-        //Evaluate child nodes
-        if (currentRoot.getLeft() != null && !currentRoot.getLeft().isRedundant())
-            removeRedundantNodes(currentRoot.getLeft(), conditionStack);
-        if (currentRoot.getRight() != null && !currentRoot.getRight().isRedundant())
-            removeRedundantNodes(currentRoot.getRight(), conditionStack);
+            //Evaluate child nodes
+            if (currentRoot.getLeft() != null && !currentRoot.getLeft().isRedundant())
+                removeRedundantNodes(currentRoot.getLeft(), conditionStack);
+            if (currentRoot.getRight() != null && !currentRoot.getRight().isRedundant())
+                removeRedundantNodes(currentRoot.getRight(), conditionStack);
         }
     }
 

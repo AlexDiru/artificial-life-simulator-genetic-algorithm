@@ -1,10 +1,12 @@
 package alexdiru.lifesim.jgap.ga;
 
+import alexdiru.lifesim.main.SimulationSettings;
 import org.apache.commons.lang.NotImplementedException;
 import org.jgap.*;
 import org.jgap.impl.CrossoverOperator;
 
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
@@ -53,15 +55,57 @@ public class CompositeGeneTreeCrossoverOperator extends CrossoverOperator {
         super(a_configuration, a_crossoverRatePercentage, a_allowFullCrossOver, a_xoverNewAge);
     }
 
-    private void regularCrossover(Gene[] firstGenes, Gene[] secondGenes, int locus, RandomGenerator generator) {
+
+    public void operate(final Population a_population,
+                        final List a_candidateChromosomes) {
+
+        int numCrossovers = SimulationSettings.crossoverRate/100;
+        RandomGenerator generator = getConfiguration().getRandomGenerator();
+        IGeneticOperatorConstraint constraint = getConfiguration().getJGAPFactory().getGeneticOperatorConstraint();
+
+        for (int i = 0; i < numCrossovers; i++) {
+            //Get two random chromosomes
+            IChromosome chrom1;
+            IChromosome chrom2;
+            do {
+                chrom1 = a_population.getChromosome(generator.nextInt(a_population.size()));
+                chrom2 = a_population.getChromosome(generator.nextInt(a_population.size()));
+            } while (chrom1 != chrom2);
+
+            // Verify that crossover is allowed.
+            if (!isXoverNewAge() && chrom1.getAge() < 1 && chrom2.getAge() < 1) {
+                // Crossing over two newly created chromosomes is not seen as helpful
+                // here.
+                // ------------------------------------------------------------------
+                continue;
+            }
+
+            if (constraint != null) {
+                List v = new Vector();
+                v.add(chrom1);
+                v.add(chrom2);
+                if (!constraint.isValid(a_population, v, this)) {
+                    // Constraint forbids crossing over.
+                    // ---------------------------------
+                    continue;
+                }
+            }
+
+            doCrossover(chrom1, chrom2, a_candidateChromosomes, generator);
+        }
+    }
+
+    private void regularCrossover(Gene[] firstGenes, Gene[] secondGenes, RandomGenerator generator) {
         Gene gene1;
         Gene gene2;
         Object firstAllele;
 
+        int locus = generator.nextInt(GeneManager.BEHAVIOUR_TREE_INDEX - 1);
+
         for (int j = locus; j <GeneManager.BEHAVIOUR_TREE_INDEX; j++) {
+
             // Make a distinction for ICompositeGene for the first gene.
             // ---------------------------------------------------------
-            int index = 0;
             if (firstGenes[j] instanceof ICompositeGene)
                 throw new NotImplementedException();
             else
@@ -84,9 +128,10 @@ public class CompositeGeneTreeCrossoverOperator extends CrossoverOperator {
         }
     }
 
-    protected void doCrossover(IChromosome firstMate, IChromosome secondMate,
+   protected void doCrossover(IChromosome firstMate, IChromosome secondMate,
                                List a_candidateChromosomes,
                                RandomGenerator generator) {
+
         Gene[] firstGenes = firstMate.getGenes();
         Gene[] secondGenes = secondMate.getGenes();
 
@@ -96,13 +141,8 @@ public class CompositeGeneTreeCrossoverOperator extends CrossoverOperator {
             //Swap tree
             treeCrossover(firstGenes, secondGenes, generator);
         } else {
-            //Swap other
-            int locus = generator.nextInt(GeneManager.BEHAVIOUR_TREE_INDEX);
-
-            Gene gene1;
-            Gene gene2;
-            Object firstAllele;
-            regularCrossover(firstGenes, secondGenes, locus, generator);
+            //Swap senses
+            regularCrossover(firstGenes, secondGenes, generator);
         }
 
         // Add the modified chromosomes to the candidate pool so that

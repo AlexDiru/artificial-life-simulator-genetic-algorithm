@@ -2,6 +2,7 @@ package alexdiru.lifesim.jgap.ga;
 
 import alexdiru.lifesim.main.Evolver;
 import alexdiru.lifesim.main.World;
+import org.jgap.FitnessFunction;
 import org.jgap.IChromosome;
 import org.jgap.InvalidConfigurationException;
 import org.jgap.Population;
@@ -38,7 +39,6 @@ public class GAConcurrentFitnessFunction implements Runnable {
     public void run() {
         for (IChromosome c : population) {
             c.getFitnessValue();
-            evolver.incrementNumberOfLifeFormsSimulatedThisGeneration();
         }
 
     }

@@ -45,7 +45,7 @@ public class LifeForm extends Object2D{
 	protected LifeFormMemory memory;
 	
 	/**
-	 * The angle the life form is facing
+fff	 * The angle the life form is facing
 	 */
     protected double angle = 0;
 	
@@ -287,6 +287,7 @@ public class LifeForm extends Object2D{
 		//Update the life form depending on whether GA and/or GP is being used
 		watch();
         updateGA();
+        //reachForFood();
 	}
 	
 	public void updateGP() {

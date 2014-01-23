@@ -11,6 +11,7 @@ package org.jgap.impl;
 
 import java.util.*;
 
+import alexdiru.lifesim.jgap.ga.CompositeGeneTreeCrossoverOperator;
 import org.jgap.*;
 
 /**
@@ -45,7 +46,7 @@ public class CrossoverOperator
    * The current crossover rate used by this crossover operator (mutual
    * exclusive to m_crossoverRatePercent and m_crossoverRateCalc).
    */
-  private int m_crossoverRate;
+  protected int m_crossoverRate;
 
   /**
    * Crossover rate in percentage of population size (mutual exclusive to
@@ -57,7 +58,7 @@ public class CrossoverOperator
    * Calculator for dynamically determining the crossover rate (mutual exclusive
    * to m_crossoverRate and m_crossoverRatePercent)
    */
-  private IUniversalRateCalculator m_crossoverRateCalc;
+  protected IUniversalRateCalculator m_crossoverRateCalc;
 
   /**
    * true: x-over before and after a randomly chosen x-over point
@@ -322,6 +323,12 @@ public class CrossoverOperator
    */
   public void operate(final Population a_population,
                       final List a_candidateChromosomes) {
+
+      if (this instanceof CompositeGeneTreeCrossoverOperator) {
+         ((CompositeGeneTreeCrossoverOperator)this).operate(a_population, a_candidateChromosomes);
+          return;
+      }
+
     // Work out the number of crossovers that should be performed.
     // -----------------------------------------------------------
     int size = Math.min(getConfiguration().getPopulationSize(),
@@ -390,6 +397,8 @@ public class CrossoverOperator
   protected void doCrossover(IChromosome firstMate, IChromosome secondMate,
                            List a_candidateChromosomes,
                            RandomGenerator generator) {
+
+
     Gene[] firstGenes = firstMate.getGenes();
     Gene[] secondGenes = secondMate.getGenes();
     int locus = generator.nextInt(firstGenes.length);

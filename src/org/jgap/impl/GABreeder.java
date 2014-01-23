@@ -91,16 +91,16 @@ public class GABreeder
     }
     else {
       // Select fittest chromosome in case it should be preserved and we are
-      // not in the very first generation.
-      // -------------------------------------------------------------------
-      if (a_conf.isPreserveFittestIndividual()) {
-        /**@todo utilize jobs. In pop do also utilize jobs, especially for fitness
-         * computation*/
-        fittest = pop.determineFittestChromosome(0, pop.size() - 1);
-      }
+        // not in the very first generation.
+        // -------------------------------------------------------------------
+        if (a_conf.isPreserveFittestIndividual()) {
+            /**@todo utilize jobs. In pop do also utilize jobs, especially for fitness
+             * computation*/
+            fittest = pop.determineFittestChromosome(0, pop.size() - 1);
+        }
     }
-    if (a_conf.getGenerationNr() > 0 && bulkFunction == null) {
-      // Adjust population size to configured size (if wanted).
+      if (a_conf.getGenerationNr() > 0 && bulkFunction == null) {
+          // Adjust population size to configured size (if wanted).
       // Theoretically, this should be done at the end of this method.
       // But for optimization issues it is not. If it is the last call to
       // evolve() then the resulting population possibly contains more
@@ -120,6 +120,7 @@ public class GABreeder
           IEvolutionMonitor.MONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES1,
           a_conf.getGenerationNr(), new Object[] {pop});
     }
+
     updateChromosomes(pop, a_conf);
     if (monitorActive) {
       // Monitor that fitness value of chromosomes is being updated.
@@ -182,7 +183,8 @@ public class GABreeder
           a_conf.getGenerationNr(), new Object[] {pop});
     }
 
-        updateChromosomes(pop, a_conf);
+       updateChromosomes(pop, a_conf);
+
     if (monitorActive) {
       // Monitor that fitness value of chromosomes is being updated.
       // -----------------------------------------------------------
@@ -196,6 +198,7 @@ public class GABreeder
     // Fill up population randomly if size dropped below specified percentage
     // of original size.
     // ----------------------------------------------------------------------
+
     fillPopulationRandomlyToOriginalSize(a_conf, pop);
     IChromosome newFittest = reAddFittest(pop, fittest);
     if (monitorActive && newFittest != null) {

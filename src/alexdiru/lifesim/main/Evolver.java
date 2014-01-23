@@ -88,7 +88,6 @@ public class Evolver implements Runnable {
         while(currentGeneration < SimulationSettings.maxGeneration && !geneticEngine.isStopSimulation()) {
            geneticEngine.evolve();
 
-
             dataset.add(getMinFitnessCurrentGeneration(), getAverageFitnessCurrentGeneration(), getMaxFitnessCurrentGeneration(), getVarFitnessCurrentGeneration(), geneticEngine.getGenotype().getPopulation().size(), GeneManager.countUniqueGenes(geneticEngine.getGenotype().getPopulation()));            //}
 
 

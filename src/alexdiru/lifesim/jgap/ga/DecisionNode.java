@@ -215,7 +215,7 @@ public class DecisionNode {
 				return "reachForFood()";*/
 		}
 
-		return function + "";
+		return "REDUNDANT";
 	}
 
     int getFunction() {
