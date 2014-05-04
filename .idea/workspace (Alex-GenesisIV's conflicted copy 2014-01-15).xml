@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/GUI.java" line="303" />
+    <bookmark url="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java" line="71" />
+    <bookmark url="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java" line="110" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c611a2e6-cd93-4554-ac64-5ab1dfed1125" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeFormDataset.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeFormDataset.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/jgap/impl/MutationOperator.java" afterPath="$PROJECT_DIR$/src/org/jgap/impl/MutationOperator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/Poison.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/Poison.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alexdiru/lifesim/main/WorldGenerationSettings.java" afterPath="$PROJECT_DIR$/src/alexdiru/lifesim/main/WorldGenerationSettings.java" />
+    </list>
+    <ignored path="life-simulation.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Geometry.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1380725312877" ignored="false" />
+    <file path="/.project" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1380725366417" ignored="false" />
+    <file path="/Program.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385726927009" ignored="false" />
+    <file path="/CreateNewWorldPanel.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1380725731139" ignored="false" />
+    <file path="/fragment.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387396722669" ignored="false" />
+    <file path="/GeneManager.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387629022393" ignored="false" />
+    <file path="/GUI.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403799980" ignored="false" />
+    <file path="/IGeneticEngine.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385292350732" ignored="false" />
+    <file path="/GAEngine.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387454271021" ignored="false" />
+    <file path="/World.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389715907355" ignored="false" />
+    <file path="/IWorld.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385293885626" ignored="false" />
+    <file path="/LifeForm.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389715589679" ignored="false" />
+    <file path="/Dummy.txt" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389802330126" ignored="false" />
+    <file path="/GeneManagerTest.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386025432986" ignored="false" />
+    <file path="/a.dummy" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389716209552" ignored="false" />
+    <file path="/DecisionNode.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389714808834" ignored="false" />
+    <file path="/CATBehaviourTree.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387480656481" ignored="false" />
+    <file path="/GAConfiguration.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389716119472" ignored="false" />
+    <file path="/NameableIntegerGene.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385728555518" ignored="false" />
+    <file path="/SimulationSummaryPanel.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385855136853" ignored="false" />
+    <file path="/GenerationDataset.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385811801316" ignored="false" />
+    <file path="/GrowthOverGenerationsDataset.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385749843528" ignored="false" />
+    <file path="/*.regexp" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385861771022" ignored="false" />
+    <file path="/GABulkFitnessFunction.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385766683836" ignored="false" />
+    <file path="/PopulationSegmentSimulator.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385763758327" ignored="false" />
+    <file path="/GAFitnessFunction.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385853327744" ignored="false" />
+    <file path="$PROJECT_DIR$/src/org/jgap/distr/grid/util/GridKit.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385767440903" ignored="false" />
+    <file path="/GABreeder.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387454563052" ignored="false" />
+    <file path="/ConcurrentBreeder.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387454500432" ignored="false" />
+    <file path="/GAConcurrentFitnessFunction.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387414100916" ignored="false" />
+    <file path="/Obstacle.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403291867" ignored="false" />
+    <file path="/WorldGenerationSettings.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387643168427" ignored="false" />
+    <file path="/ThreadHelper.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385834541662" ignored="false" />
+    <file path="/SimulationSettings.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389716377348" ignored="false" />
+    <file path="/ConcurrentList.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385842969800" ignored="false" />
+    <file path="/DecisionNodeType.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385833649815" ignored="false" />
+    <file path="/WorldGenerationMethod.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385833698187" ignored="false" />
+    <file path="/DebugHelper.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385833778757" ignored="false" />
+    <file path="/ItemsList.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385833887627" ignored="false" />
+    <file path="/MathHelper.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385833944076" ignored="false" />
+    <file path="/WorldSimulation.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385841900996" ignored="false" />
+    <file path="/LifeFormMemory.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385843145499" ignored="false" />
+    <file path="/IClone.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386023627931" ignored="false" />
+    <file path="/CloneHelper.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386023559566" ignored="false" />
+    <file path="/Object2D.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403280371" ignored="false" />
+    <file path="/Evolver.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387454024418" ignored="false" />
+    <file path="/Water.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403314480" ignored="false" />
+    <file path="/Item.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403264080" ignored="false" />
+    <file path="/Food.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403249896" ignored="false" />
+    <file path="/Poison.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387403301139" ignored="false" />
+    <file path="/ThreadLocal.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1385859325515" ignored="false" />
+    <file path="/LifeFormBehaviourType.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386845460702" ignored="false" />
+    <file path="/FitnessFunctionType.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1386845450120" ignored="false" />
+    <file path="$PROJECT_DIR$/../2d-engine/src/abcdef/Engine.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387285242721" ignored="false" />
+    <file path="/Engine.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387285241511" ignored="false" />
+    <file path="$PROJECT_DIR$/../2d-engine/src/abcdef/GUIAssets.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387285220482" ignored="false" />
+    <file path="/GUIAssets.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387285220482" ignored="false" />
+    <file path="$PROJECT_DIR$/../2d-engine/src/abcdef/AndroidControls.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387288589927" ignored="false" />
+    <file path="/AndroidControls.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387288272048" ignored="false" />
+    <file path="/MutationOperator.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389716560664" ignored="false" />
+    <file path="/CompositeGeneTreeMutationOperator.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389716500753" ignored="false" />
+    <file path="/CompositeGeneTreeCrossoverOperator.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387401119462" ignored="false" />
+    <file path="/ICompositeGene.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387389996996" ignored="false" />
+    <file path="/CompositeGene.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387390091605" ignored="false" />
+    <file path="/LifeFormDataset.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1389647606729" ignored="false" />
+    <file path="/CATBehaviourTest.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387640496371" ignored="false" />
+    <file path="/LibGDXApplicationListener.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387414575840" ignored="false" />
+    <file path="/Renderer.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387414356942" ignored="false" />
+    <file path="/GALifeForm.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387629607941" ignored="false" />
+    <file path="/TileBasedLifeForm.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387629475182" ignored="false" />
+    <file path="/ItemsListTest.java" changelist="c611a2e6-cd93-4554-ac64-5ab1dfed1125" time="1387629692001" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/life-simulation$CATBehaviourTest_testThing.coverage" NAME="CATBehaviourTest.testGeneToTreeToGeneConversion Coverage Results" MODIFIED="1387478066723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>alexdiru.lifesim.jgap.ga.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" line="1" class="World.java" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="life-simulation" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="LifeForm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="15" selection-start="2205" selection-end="2212" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GAEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="5" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulationSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="7" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GAConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="30" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="50" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="214" column="88" selection-start="5825" selection-end="5825" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompositeGeneTreeCrossoverOperator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="114" column="0" selection-start="5103" selection-end="5103" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompositeGeneTreeMutationOperator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="59" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CATBehaviourTree.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="300" column="0" selection-start="10184" selection-end="10184" vertical-scroll-proportion="0.38641685">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MutationOperator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/jgap/impl/MutationOperator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="194" column="25" selection-start="7711" selection-end="7711" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GALifeForm.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/TileBasedLifeForm.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/helpers/ItemsListTest.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTest.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeFormDataset.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/WorldGenerationSettings.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/Poison.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java" />
+        <option value="$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java" />
+        <option value="$PROJECT_DIR$/src/org/jgap/impl/MutationOperator.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+          <State>
+            <id>Spring Model</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Spring Model</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jgap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jgap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifesim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swingcomp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifesim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifesim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifesim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifesim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life-simulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifesim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enums" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2d-engine" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="alexdiru.lifesim.jgap.ga" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\Dropbox\EclipseWorkspace\life-simulation\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Program">
+    <configuration default="false" name="Program" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="alexdiru.lifesim.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="alexdiru.lifesim.main.Program" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="life-simulation" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GeneManagerTest.testGeneEquality" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="alexdiru.lifesim.jgap.ga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="life-simulation" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="alexdiru.lifesim.jgap.ga" />
+      <option name="MAIN_CLASS_NAME" value="alexdiru.lifesim.jgap.ga.GeneManagerTest" />
+      <option name="METHOD_NAME" value="testGeneEquality" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GeneManagerTest.testCountUniqueGenes" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="alexdiru.lifesim.jgap.ga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="life-simulation" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="alexdiru.lifesim.jgap.ga" />
+      <option name="MAIN_CLASS_NAME" value="alexdiru.lifesim.jgap.ga.GeneManagerTest" />
+      <option name="METHOD_NAME" value="testCountUniqueGenes" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CATBehaviourTest.testGeneToTreeToGeneConversion" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="alexdiru.lifesim.jgap.ga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="life-simulation" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="alexdiru.lifesim.jgap.ga" />
+      <option name="MAIN_CLASS_NAME" value="alexdiru.lifesim.jgap.ga.CATBehaviourTest" />
+      <option name="METHOD_NAME" value="testGeneToTreeToGeneConversion" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CATBehaviourTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="alexdiru.lifesim.jgap.ga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="life-simulation" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="alexdiru.lifesim.jgap.ga" />
+      <option name="MAIN_CLASS_NAME" value="alexdiru.lifesim.jgap.ga.CATBehaviourTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Program" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GeneManagerTest.testGeneEquality" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GeneManagerTest.testCountUniqueGenes" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CATBehaviourTest.testGeneToTreeToGeneConversion" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CATBehaviourTest" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Program" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CATBehaviourTest.testGeneToTreeToGeneConversion" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CATBehaviourTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GeneManagerTest.testCountUniqueGenes" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GeneManagerTest.testGeneEquality" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c611a2e6-cd93-4554-ac64-5ab1dfed1125" name="Default" comment="" />
+      <created>1380725257490</created>
+      <updated>1380725257490</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added saving and loading of genotypes">
+      <created>1385300688268</created>
+      <updated>1385300688268</updated>
+    </task>
+    <task id="LOCAL-00002" summary="To do: Multi-threading simulation and refactor &#10;(Added data table)">
+      <created>1385762379800</created>
+      <updated>1385762379800</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added multithreaded simulations">
+      <created>1385773141495</created>
+      <updated>1385773141495</updated>
+    </task>
+    <task id="LOCAL-00004" summary="I might be about to break things a lot...">
+      <created>1385854486412</created>
+      <updated>1385854486412</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Multithreaded simulation!">
+      <created>1385903670510</created>
+      <updated>1385903670510</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6807564" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17129135" sideWeight="0.6807564" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3192436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67964405" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multithreaded simulation!" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Added saving and loading of genotypes" />
+    <MESSAGE value="To do: Multi-threading simulation and refactor &#10;(Added data table)" />
+    <MESSAGE value="Added multithreaded simulations" />
+    <MESSAGE value="I might be about to break things a lot..." />
+    <MESSAGE value="Multithreaded simulation!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/helpers/ItemsListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/helpers/ItemsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/helpers/FileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/DecisionNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="42" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/WorldGenerationSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="5" selection-start="2117" selection-end="2117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/Poison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="33" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GeneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="50" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/LifeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="15" selection-start="2205" selection-end="2212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="88" selection-start="5825" selection-end="5825" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="5" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/GAConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="30" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeCrossoverOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="0" selection-start="5103" selection-end="5103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/main/SimulationSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="7" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CompositeGeneTreeMutationOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="59" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/jgap/impl/MutationOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="194" column="25" selection-start="7711" selection-end="7711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alexdiru/lifesim/jgap/ga/CATBehaviourTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="300" column="0" selection-start="10184" selection-end="10184" vertical-scroll-proportion="0.38641685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>life-simulation</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

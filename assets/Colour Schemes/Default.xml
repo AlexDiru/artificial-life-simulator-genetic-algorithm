@@ -1,0 +1,9 @@
+<colourScheme>
+	<grass>grass.png</grass>
+	<food>food.png</food>
+	<poison>poison.png</poison>
+	<water>water.png</water>
+	<lifeform>lifeform.png</lifeform>
+	<obstacle>obstacle.png</obstacle>
+	<death>gibs.png</death>
+</colourScheme>
