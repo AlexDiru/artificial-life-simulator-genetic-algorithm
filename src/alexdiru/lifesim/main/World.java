@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import alexdiru.lifesim.enums.WorldGenerationMethod;
+import alexdiru.lifesim.jgap.ga.GeneManager;
 import org.apache.commons.io.FileUtils;
 import org.jgap.IChromosome;
 
@@ -89,11 +90,38 @@ public class World implements Serializable {
 	 */
 	private Integer simulationStartPosition;
 
+
+    public void stopThread() {
+        getGui().getEvolverThread().stop();
+
+        try {
+            getGui().getEvolverThread().join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+    }
+
+    /**
+     * Stops the simulation and evolution process
+     */
+    public void stopSim() {
+
+       stopThread();
+        postMapGenerationSetup();
+    }
+
+    public void startSim() {
+        getGui().startWorld(true);
+        setEvolver(getGui().getEvolver());
+    }
+
     private World() {
 
     }
 
-	public World(GUI gui, Evolver evolver) {
+
+    public World(GUI gui, Evolver evolver) {
         this.gui = gui;
         this.evolver = evolver;
         items = new ArrayList<Item>();
@@ -128,7 +156,7 @@ public class World implements Serializable {
 	 * Called once the map has been generated (either algorithmically or loaded from a file)
 	 * Sets up the genetic algorithm engine, and defaults some variables
 	 */
-	protected void postMapGenerationSetup() {
+    public void postMapGenerationSetup() {
         evolver.reset();
 		evolver.setNumberOfLifeFormsSimulatedThisGeneration(0);
 	}
@@ -259,8 +287,6 @@ public class World implements Serializable {
         generateWater(generationSettings.getPercentageOfWater(), true);
 
         setupSimulationPositions();
-
-        save("C:/Users/Alex/Desktop/testmap.xml");
     }
 
 
@@ -342,7 +368,7 @@ public class World implements Serializable {
     }
 
     //Loads a map and returns the success of the operation
-    public boolean loadMap(String mapFile) {
+    public boolean loadMap( String mapFile, String customChromFile) {
         resetWorld();
 
         InputStream in = null; //The file to be passed to the stream reader
@@ -385,13 +411,14 @@ public class World implements Serializable {
                                     errorMessage += "Attribute \"ysize\" must be an integer\n";
                                 }
                             }
-
-                            //Make sure xsize and ysize attributes were read from the node
-                            if (xTileSize == -1)
-                                errorMessage += "Attribute \"xsize\" is missing\n";
-                            if (yTileSize == -1)
-                                errorMessage += "Attribute \"ysize\" is missing\n";
                         }
+
+                        //Make sure xsize and ysize attributes were read from the node
+                        if (xTileSize == -1)
+                            errorMessage += "Attribute \"xsize\" is missing\n";
+                        if (yTileSize == -1)
+                            errorMessage += "Attribute \"ysize\" is missing\n";
+
                         //If an object node is read
                     } else if (streamReader.getLocalName().equals("obstacle") ||
                             streamReader.getLocalName().equals("water") ||
@@ -428,10 +455,25 @@ public class World implements Serializable {
                         } else {
                             errorMessage += "Object coordinates must be two comma separated integers\n";
                         }
+                    } else if (streamReader.getLocalName().equals("chromfile")) {
+
+
+                        if (customChromFile.equals("")) {
+
+                            System.out.println("Loading generic");
+                            GeneManager.loadInitialChromosomes(evolver.getGeneticEngine().getConfiguration(),streamReader.getElementText(), false);
+                            SimulationSettings.initialChromosomeFile = streamReader.getElementText();
+                        }
+                        else {
+                            System.out.println("Loading fittest");
+                            GeneManager.loadInitialChromosomes(evolver.getGeneticEngine().getConfiguration(),customChromFile, true);
+                            SimulationSettings.initialChromosomeFile = customChromFile;
+                        }
                     }
                 }
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
             return false;
         }
 
@@ -442,7 +484,6 @@ public class World implements Serializable {
 
         System.out.println(errorMessage);
 
-        postMapGenerationSetup();
 
         return true;
     }
@@ -458,6 +499,12 @@ public class World implements Serializable {
         }
         for (Point p : simulationStartPositions)
             sb.append("\t<start>").append(p.x).append(",").append(p.y).append("</start>\n");
+
+        String chromFile = mapFile.substring(0,mapFile.length()-4) + "chrom.txt";
+        sb.append("\t<chromfile>").append(chromFile).append("</chromfile>\n");
+
+        GeneManager.saveInitialChromosomes(chromFile);
+
         sb.append("</map>");
 
         try {
@@ -589,7 +636,7 @@ public class World implements Serializable {
     }
 
     /**
-     * Clones the world to be used by the multithreaded simulation
+     * Deep copies the world to be used by the multithreaded simulation
      * @return The cloned world
      */
     public World clone() {

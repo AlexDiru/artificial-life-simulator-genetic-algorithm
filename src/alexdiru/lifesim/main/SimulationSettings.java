@@ -1,5 +1,14 @@
 package alexdiru.lifesim.main;
 
+import alexdiru.lifesim.datamining.DistanceMatrix;
+import alexdiru.lifesim.jgap.ga.GeneManager;
+import org.jgap.IChromosome;
+
+import java.io.File;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.List;
+
 public class SimulationSettings {
 
 	//Fitness = Stamina + (MaxUsedEnergy - UsedEnergy)
@@ -36,4 +45,33 @@ public class SimulationSettings {
      * The chance a chromosome has for it's behaviour to mutate = 1/mutationRate
      */
     public static int behaviourMutationRate = 3;
+
+    public static final int RANDOM_SEED = 1;
+
+    /**
+     * Directory to store simulation files in
+     */
+    private static String simulationDirectory = "";
+    public static String initialChromosomeFile = "";
+
+    public static void setupNewSimulationDirectory() {
+        String timeStamp = new Timestamp((new Date()).getTime()).toString();
+        timeStamp = timeStamp.replace("-","").replace(" ", "").replace(":","").replace(".","");
+        simulationDirectory = "SimulationData/Simulation" + timeStamp + "/";
+
+        File file = new File(simulationDirectory);
+        file.mkdirs();
+    }
+
+    public static void saveData(Evolver evolver, int generation) {
+        List<IChromosome> currentPopulation = evolver.getGeneticEngine().getGenotype().getPopulation().getChromosomes();
+        GeneManager.saveChromosomes(simulationDirectory + "chrom" + generation + ".txt", currentPopulation);
+        GeneManager.saveFittestChromosomeAsGeneration(simulationDirectory + "fittest" + generation + ".txt", currentPopulation);
+        DistanceMatrix.saveDistanceMatrix(simulationDirectory + "distmat" + generation + ".txt", currentPopulation);
+    }
+
+    public static void saveWorld(World world, List<IChromosome> initialChromosomes) {
+        GeneManager.storeInitialChromosomes(initialChromosomes);
+        world.save(simulationDirectory + "map.txt");
+    }
 }

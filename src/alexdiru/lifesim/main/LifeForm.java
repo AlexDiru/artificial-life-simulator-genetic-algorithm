@@ -45,7 +45,7 @@ public class LifeForm extends Object2D{
 	protected LifeFormMemory memory;
 	
 	/**
-fff	 * The angle the life form is facing
+	 * The angle the life form is facing
 	 */
     protected double angle = 0;
 	
@@ -445,12 +445,12 @@ fff	 * The angle the life form is facing
 		return stamina;
 	}
 
-	public void moveTurnLeft() {
+	public void forwardTurnLeft() {
 		turnLeft(senses.getTurnSpeed()/2);
 		moveForward(senses.getMoveSpeed()/2);
 	}
 	
-	public void moveTurnRight() {
+	public void forwardTurnRight() {
 		turnRight(senses.getTurnSpeed()/2);
 		moveForward(senses.getMoveSpeed()/2);
 	}

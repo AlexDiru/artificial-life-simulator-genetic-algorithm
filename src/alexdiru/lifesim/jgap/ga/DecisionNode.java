@@ -65,7 +65,7 @@ public class DecisionNode {
 	 * @param g The gene
 	 * @return The decision node
 	 */
-	static DecisionNode create(final Gene g) {
+	public static DecisionNode create(final Gene g) {
         configuration = g.getConfiguration();
 
 		int val = (Integer)g.getAllele();
@@ -218,7 +218,7 @@ public class DecisionNode {
 		return "REDUNDANT";
 	}
 
-    int getFunction() {
+    public int getFunction() {
         return function;
     }
 
@@ -287,5 +287,15 @@ public class DecisionNode {
 
     public int getDepth() {
         return depth;
+    }
+
+    public boolean isTheSameAs(DecisionNode other) {
+        return (other.function == function && other.type == type) || (isRedunant && other.isRedunant);
+    }
+
+    public void swapChildren() {
+        DecisionNode temp = left;
+        left = right;
+        right = temp;
     }
 }

@@ -23,6 +23,12 @@ public class CATBehaviourTree {
 	 * The root node of the behaviour tree (evaluated first)
 	 */
 	private DecisionNode root;
+
+
+    public DecisionNode getRoot() {
+        return root;
+    }
+
 	/**
 	 * Creates a behaviour tree from a list of genes
 	 * @param lifeForm The life form to assign the behaviour tree to
@@ -323,7 +329,7 @@ public class CATBehaviourTree {
                     //Left branch is never going to be used
                     //So replace this node with the right child
 
-                    //If no parent, then root node, so just mark as redundant
+                        //If no parent, then root node, so just mark as redundant
                     if (currentRoot.getParent() == null)
                         currentRoot.markAsRedundant();
                     //If the left child doesn't exist, then we just need to remove this node

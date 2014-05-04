@@ -26,10 +26,10 @@ public class LifeFormMemory {
 		//Duplicate items
 		if (storedItems.contains(item))
 			return;
-		
+
 		if (storedItems.size() >= memorySize)
 			storedItems.remove(0);
-	
+
 		storedItems.add(item);
 	}
 	

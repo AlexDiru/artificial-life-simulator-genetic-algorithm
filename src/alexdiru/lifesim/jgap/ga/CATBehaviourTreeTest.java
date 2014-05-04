@@ -1,9 +1,7 @@
 package alexdiru.lifesim.jgap.ga;
 
 import junit.framework.TestCase;
-import org.jgap.Configuration;
-import org.jgap.ICompositeGene;
-import org.jgap.InvalidConfigurationException;
+import org.jgap.*;
 import org.jgap.impl.CompositeGene;
 import org.jgap.impl.DefaultConfiguration;
 import org.jgap.impl.IntegerGene;
@@ -40,7 +38,7 @@ public class CATBehaviourTreeTest extends TestCase {
         DecisionNode.TERMINAL_NUMBER = 5;
         GeneManager.TREE_NODE_DEPTH = 2;
         GeneManager.TREE_NODE_SIZE = 7;
-        testAlleles( new int[] { 0 , 1,2,3,4,5,6 });
+        testAlleles( new int[] { 0,1,2,3,4,5,6 });
         testAlleles( new int[] {6,5,4,3,2,1,0 });
         testAlleles( new int[] {6,5,4,4,0,3,0 });
         GeneManager.TREE_NODE_DEPTH = 3;
@@ -48,7 +46,7 @@ public class CATBehaviourTreeTest extends TestCase {
         testAlleles( new int[] {6,5,4,4,0,3,0,6,5,4,4,0,3,0,2 });
         GeneManager.TREE_NODE_DEPTH = 4;
         GeneManager.TREE_NODE_SIZE = 31;
-        testAlleles( new int[] {6,5,4,4,0,3,0,6,5,4,4,0,3,0,2, 4, 6,5,4,4,0,3,0,6,5,4,4,0,3,0,2 });
+        testAlleles( new int[] {6,5,4,4,0,3,0,6,5,4,4,0,3,0,2, 4,6,5,4,4,0,3,0,6,5,4,4,0,3,0,2 });
         GeneManager.TREE_NODE_DEPTH = 5;
         GeneManager.TREE_NODE_SIZE = 63;
         testAlleles( new int[] {6,5,6,5,4,4,0,3,0,6,5,4,4,0,3,0,2,4,6,5,4,4,0,3,0,6,5,4,4,0,3,0,2,1,4,4,0,3,0,6,5,4,4,0,3,0,2,4,6,5,4,4,0,3,0,6,5,4,4,0,3,0,2 });

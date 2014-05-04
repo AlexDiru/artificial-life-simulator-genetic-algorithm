@@ -89,4 +89,10 @@ public class ConcurrentBreeder extends GABreeder {
         //Join all the threads to make sure the simulating is done
         ThreadHelper.waitForThreads(threads);
     }
+
+    public void stopThreads() {
+        for (int i = 0; i < numThreads; i++)
+            if (threads[i] != null)
+                threads[i].stop();
+    }
 }

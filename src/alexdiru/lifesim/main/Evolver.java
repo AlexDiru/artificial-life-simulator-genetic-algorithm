@@ -82,15 +82,19 @@ public class Evolver implements Runnable {
      */
     @Override
     public void run() {
-
+        SimulationSettings.setupNewSimulationDirectory();
 
         runEnded = false;
 
+        SimulationSettings.saveWorld(world, getGeneticEngine().getGenotype().getPopulation().getChromosomes());
+
         while(currentGeneration < SimulationSettings.maxGeneration && !geneticEngine.isStopSimulation()) {
+            if (currentGeneration % 10 == 1 || currentGeneration <= 10)
+                SimulationSettings.saveData(this, currentGeneration - 1);
+
            geneticEngine.evolve();
 
-            dataset.add(getMinFitnessCurrentGeneration(), getAverageFitnessCurrentGeneration(), getMaxFitnessCurrentGeneration(), getVarFitnessCurrentGeneration(), geneticEngine.getGenotype().getPopulation().size(), GeneManager.countUniqueGenes(geneticEngine.getGenotype().getPopulation()));            //}
-
+            dataset.add(getMinFitnessCurrentGeneration(), getAverageFitnessCurrentGeneration(), getMaxFitnessCurrentGeneration(), getVarFitnessCurrentGeneration(), geneticEngine.getGenotype().getPopulation().size(), GeneManager.countUniqueGenes(geneticEngine.getGenotype().getPopulation()));
 
             if (geneticEngine.isStopSimulation())
                 break;
@@ -201,5 +205,22 @@ public class Evolver implements Runnable {
 
     public void incrementNumberOfLifeFormsSimulatedThisGeneration() {
         numberOfLifeFormsSimulatedThisGeneration.incrementAndGet();
+    }
+
+    public void restart() {
+        world.stopThread();
+        world.restart();
+        dataset.reset();
+        currentGeneration = 1;
+        geneticEngine.restart();
+        world.startSim();
+    }
+
+    public void stopThreads() {
+        geneticEngine.stopThreads();
+    }
+
+    public void setCurrentGeneration(int currentGeneration) {
+        this.currentGeneration = currentGeneration;
     }
 }

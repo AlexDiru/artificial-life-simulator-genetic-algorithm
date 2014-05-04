@@ -3,6 +3,7 @@ import alexdiru.lifesim.main.Evolver;
 import org.jgap.Chromosome;
 import org.jgap.Configuration;
 import org.jgap.InvalidConfigurationException;
+import org.jgap.RandomGenerator;
 import org.jgap.impl.*;
 
 import alexdiru.lifesim.interfaces.IXMLConverter;
@@ -66,6 +67,9 @@ public class GAConfiguration extends DefaultConfiguration implements IXMLConvert
             setPreservFittestIndividual(false);
             setKeepPopulationSizeConstant(true);
 
+
+            if (SimulationSettings.RANDOM_SEED != -1)
+                setRandomGenerator(new SeededRandomGenerator(SimulationSettings.RANDOM_SEED));
 
 
 

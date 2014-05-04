@@ -30,7 +30,8 @@ public class CreateNewWorldPanel extends JPanel {
 	private JSpinner spinnerFood;
 	private JLabel lblLifeFormsError;
 	private JLabel lblOpenStepsError;
-	private JTextField textFieldFileToLoad;
+    private JTextField textFieldFileToLoad;
+    private JTextField textFieldChromFileToLoad;
 	private JLabel lblFileError;
 	private JLabel lblXSizeError;
 	private JLabel lblYSizeError;
@@ -40,7 +41,7 @@ public class CreateNewWorldPanel extends JPanel {
 	private JSpinner spinnerPoison;
 	private JLabel lblFoodError;
 	private JLabel lblPoisonError;
-	
+
 	public CreateNewWorldPanel( final World world) {
 
 		//Default the controls to have the settings of the current world
@@ -66,6 +67,7 @@ public class CreateNewWorldPanel extends JPanel {
 		add(lblCreateNewWorld, gbc_lblCreateNewWorld);
 		
 		textFieldFileToLoad = new JTextField();
+        textFieldFileToLoad.setText("C:/Users/Alex/Desktop/testmap.txt");
 		GridBagConstraints gbc_textFieldFileToLoad = new GridBagConstraints();
 		gbc_textFieldFileToLoad.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textFieldFileToLoad.gridwidth = 3;
@@ -74,6 +76,17 @@ public class CreateNewWorldPanel extends JPanel {
 		gbc_textFieldFileToLoad.gridy = 1;
 		add(textFieldFileToLoad, gbc_textFieldFileToLoad);
 		textFieldFileToLoad.setColumns(10);
+
+        textFieldChromFileToLoad = new JTextField();
+        textFieldChromFileToLoad.setText("C:\\Users\\Alex\\Dropbox\\EclipseWorkspace\\life-simulation\\SimulationData\\Simulation20140501220553758\\fittest1.txt");
+        GridBagConstraints gbc_textFieldChromFileToLoad = new GridBagConstraints();
+        gbc_textFieldChromFileToLoad.fill = GridBagConstraints.HORIZONTAL;
+        gbc_textFieldChromFileToLoad.gridwidth = 3;
+        gbc_textFieldChromFileToLoad.insets = new Insets(0, 0, 5, 5);
+        gbc_textFieldChromFileToLoad.gridx = 0;
+        gbc_textFieldChromFileToLoad.gridy = 2;
+        add(textFieldChromFileToLoad, gbc_textFieldChromFileToLoad);
+        textFieldChromFileToLoad.setColumns(10);
 		
 		JButton btnBrowse = new JButton("Browse");
 		btnBrowse.addActionListener(new ActionListener() {
@@ -98,12 +111,19 @@ public class CreateNewWorldPanel extends JPanel {
 		JButton btnLoad = new JButton("Load");
 		btnLoad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+                world.stopSim();
+
 				lblFileError.setText("");
-				boolean success = world.loadMap(textFieldFileToLoad.getText());
+                System.out.println("Loading map");
+				boolean success = world.loadMap(textFieldFileToLoad.getText(), textFieldChromFileToLoad.getText());
 				if (!success)
 					lblFileError.setText("Please make sure file exists and is not corrupt");
 				else
 					lblFileError.setText("World loaded successfully");
+                world.getEvolver().setCurrentGeneration(1);
+                world.getEvolver().getGeneticEngine().setup();
+                world.getGui().startWorld(true);
+                //world.startSim();
 			}
 		});
 		GridBagConstraints gbc_btnLoad = new GridBagConstraints();
@@ -268,17 +288,7 @@ public class CreateNewWorldPanel extends JPanel {
 				if (cerr || eerr)
 					return;
 
-                //world.getEvolver().getGeneticEngine().stopSimulation();
-                world.getGui().getEvolverThread().stop();
-
-
-                try {
-                    world.getGui().getEvolverThread().join();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-
-                System.out.println("joined");
+                world.stopSim();
 
                 WorldGenerationSettings settings = new WorldGenerationSettings();
 				settings.setXSize((Integer) spinnerXSize.getValue());
@@ -289,9 +299,7 @@ public class CreateNewWorldPanel extends JPanel {
 				settings.setPercentageOfPoison((Integer) spinnerPoison.getValue());
 				world.generateWorld(settings, WorldGenerationMethod.EMPTY);
 
-
-                world.getGui().startWorld(true);
-                world.setEvolver(world.getGui().getEvolver());
+                world.startSim();
 			}
 		});
 		

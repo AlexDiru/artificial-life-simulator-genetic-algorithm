@@ -12,6 +12,7 @@ package org.jgap;
 import java.io.*;
 import java.util.*;
 
+import alexdiru.lifesim.jgap.ga.GeneManager;
 import org.jgap.audit.*;
 import org.jgap.distr.*;
 import org.jgap.impl.job.*;
@@ -137,7 +138,7 @@ public class Genotype
       throws InvalidConfigurationException {
   }
 
-  /**
+    /**
    * Retrieves the array of Chromosomes that make up the population of this
    * Genotype instance.
    *
@@ -342,6 +343,30 @@ public class Genotype
     return result;
   }
 
+    public static Genotype initialGenotype(Configuration a_configuration, List<Gene[]> genes)
+            throws InvalidConfigurationException {
+        if (a_configuration == null) {
+            throw new IllegalArgumentException(
+                    "The Configuration instance may not be null.");
+        }
+        a_configuration.lockSettings();
+        // Create an array of chromosomes equal to the desired size in the
+        // active Configuration and then populate that array with Chromosome
+        // instances constructed according to the setup in the sample
+        // Chromosome, but with random gene values (alleles). The Chromosome
+        // class randomInitialChromosome() method will take care of that for
+        // us.
+        // ------------------------------------------------------------------
+        int populationSize = a_configuration.getPopulationSize();
+        Population pop = new Population(a_configuration, populationSize);
+        // Do randomized initialization.
+        // -----------------------------
+        Genotype result = new Genotype(a_configuration, pop);
+        result.fillPopulation(populationSize, genes);
+
+        return result;
+    }
+
   /**
    * Fills up the population with random chromosomes if necessary.
    *
@@ -378,6 +403,33 @@ public class Genotype
       }
     }
   }
+
+    public void fillPopulation(final int a_num, List<Gene[]> genes) throws InvalidConfigurationException {
+        IChromosome sampleChrom = getConfiguration().getSampleChromosome();
+        Class sampleClass = sampleChrom.getClass();
+        IInitializer chromIniter = getConfiguration().getJGAPFactory().
+                getInitializerFor(sampleChrom, sampleClass);
+        if (chromIniter == null) {
+            throw new InvalidConfigurationException("No initializer found for class "
+                    + sampleClass);
+        }
+        try {
+            for (int i = 0; i < a_num; i++) {
+                IChromosome c = (IChromosome) chromIniter.perform(sampleChrom,sampleClass, null);
+                GeneManager.setGenes(c.getGenes(), genes.get(i));
+                getPopulation().addChromosome(c);
+            }
+        } catch (Exception ex) {
+            // Try to propagate exception, see "bug" 1661635.
+            // ----------------------------------------------
+            if (ex.getCause() != null) {
+                throw new IllegalStateException(ex.getCause().toString());
+            }
+            else {
+                throw new IllegalStateException(ex.getMessage());
+            }
+        }
+    }
 
   /**
    * Compares this Genotype against the specified object. The result is true

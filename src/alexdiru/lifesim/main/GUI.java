@@ -1,26 +1,40 @@
 package alexdiru.lifesim.main;
 
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+
+import org.jgap.Gene;
+
 import alexdiru.lifesim.enums.GraphType;
 import alexdiru.lifesim.enums.WorldGenerationMethod;
 import alexdiru.lifesim.jgap.ga.GeneManager;
 import alexdiru.lifesim.swingcomp.CreateNewWorldPanel;
 import alexdiru.lifesim.swingcomp.GenerationGrowthLineGraphPanel;
+import alexdiru.lifesim.swingcomp.GenotypeComparerPanel;
+import alexdiru.lifesim.swingcomp.LifeFormTree;
 import alexdiru.lifesim.swingcomp.SimulationSummaryPanel;
-import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
-import org.jgap.Gene;
 
-import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.TreeModelEvent;
-import javax.swing.event.TreeModelListener;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeModel;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.Serializable;
+import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
 
 public class GUI extends JFrame {
 	
@@ -35,18 +49,19 @@ public class GUI extends JFrame {
 	private LibGDXApplicationListener applicationListener;
 	private JFrame showCreateNewWorldFrame = null;
 	private JFrame showSummaryFrame = null;
+	private JFrame showGenotypeComparerFrame = null;
 	private JLabel generationProgressLabel;
 	
-	private JTree behaviourTree;
-	private DefaultTreeModel behaviourTreeModel;
-	
+	//private JTree behaviourTree;
+	//private DefaultTreeModel behaviourTreeModel;
+
+    private LifeFormTree tree;
+
 	private Gene[] fittestGenes = null;
     private Thread t = null; //Thread to run the world on
 
     public void setTree(DefaultMutableTreeNode root) {
-		behaviourTreeModel.setRoot(root);
-		for (int i = 0; i < behaviourTree.getRowCount(); i++) 
-	         behaviourTree.expandRow(i);
+		tree.setTree(root);
 	}
 
     public Thread getEvolverThread() {
@@ -101,7 +116,7 @@ public class GUI extends JFrame {
        JButton btnRestart = new JButton("Restart");
        btnRestart.addActionListener(new ActionListener() {
        	public void actionPerformed(ActionEvent e) {
-            evolver.getWorld().restart();
+            evolver.restart();
        	}
        });
        panel.add(btnRestart);
@@ -142,7 +157,7 @@ public class GUI extends JFrame {
             evolver.getWorld().toggleAutoMode();
        	}
        });
-       panel.add(btnAutoModeToggle);
+       //panel.add(btnAutoModeToggle);
        
        final JCheckBox cb = new JCheckBox("Render");
        cb.setSelected(true);
@@ -160,6 +175,14 @@ public class GUI extends JFrame {
     	   }
        });
        panel.add(chckbxFollowLifeForm);
+       
+       JButton btnCompareGenotypes = new JButton("Compare Genotypes");
+       btnCompareGenotypes.addActionListener(new ActionListener() {
+       	public void actionPerformed(ActionEvent arg0) {
+       		showGenotypeComparer();
+       	}
+       });
+       panel.add(btnCompareGenotypes);
        
        generationProgressLabel = new JLabel();
        generationProgressLabel.setHorizontalAlignment(SwingConstants.LEFT);
@@ -194,33 +217,14 @@ public class GUI extends JFrame {
        FlowLayout flowLayout_1 = (FlowLayout) minimumChartPanel.getLayout();
        flowLayout_1.setAlignment(FlowLayout.LEFT);
        d.setSize(verticalBox_1.getMinimumSize().getWidth(), verticalBox_1.getPreferredSize().getHeight());
-       behaviourTreeModel = new DefaultTreeModel(new DefaultMutableTreeNode("No fittest gene in first generation"));
-       behaviourTreeModel.addTreeModelListener(new TreeModelListener() {
-			 public void treeNodesChanged(TreeModelEvent e) {
-		        DefaultMutableTreeNode node;
-		        node = (DefaultMutableTreeNode)(e.getTreePath().getLastPathComponent());
-		        try {
-		            int index = e.getChildIndices()[0];
-		            node = (DefaultMutableTreeNode)(node.getChildAt(index));
-		        } catch (NullPointerException ex) {
-		        }
-		    }
-		    public void treeNodesInserted(TreeModelEvent e) {
-		    }
-		    public void treeNodesRemoved(TreeModelEvent e) {
-		    }
-		    public void treeStructureChanged(TreeModelEvent e) {
-		    }
-		});
+
+       tree = new LifeFormTree();
        
        JPanel behaviourTreePanel = new JPanel();
        panel_1.add(behaviourTreePanel);
        behaviourTreePanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-       
-       behaviourTree = new JTree();
-       behaviourTreePanel.add(behaviourTree);
-       
-       behaviourTree.setModel(behaviourTreeModel);
+
+       behaviourTreePanel.add(tree);
        
        JButton btnLoad = new JButton("Load");
        btnLoad.addActionListener(new ActionListener() {
@@ -257,8 +261,9 @@ public class GUI extends JFrame {
     public void startWorld(boolean force) {
        if (t != null && !force)
            return;
+
        t = new Thread(evolver);
-        t.start();
+       t.start();
     }
     
     public static String convertTextToMultiLine(String text) {
@@ -306,6 +311,23 @@ public class GUI extends JFrame {
 			showSummaryFrame.setVisible(true);
 		}
 	}
+	
+	public void showGenotypeComparer() {
+		synchronized (evolver.getWorld()) {
+            if (showGenotypeComparerFrame != null) {
+                showGenotypeComparerFrame.setVisible(true);
+                return;
+            }
+
+			//Create a new frame for the life form
+			showGenotypeComparerFrame = new JFrame();
+			showGenotypeComparerFrame.setAlwaysOnTop(true);
+
+			showGenotypeComparerFrame.setSize(850,800);
+			showGenotypeComparerFrame.getContentPane().add(new GenotypeComparerPanel());
+			showGenotypeComparerFrame.setVisible(true);
+		}
+	}
 
 	//Hides the frame containing the summary of a round/generation
 	public void closeSimulationSummaryFrame() {
@@ -320,21 +342,48 @@ public class GUI extends JFrame {
 		fittestGenes = genes;
 	}
 
-	private void loadBehaviour() {
+	private void loadBehaviour() {/*
         JFileChooser chooser = new JFileChooser();
         chooser.setCurrentDirectory(new File("C:/Users/Alex/Dropbox/EclipseWorkspace/life-simulation"));
-        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
-            evolver.getGeneticEngine().loadFittest(chooser.getSelectedFile().getAbsolutePath());
-	}
+        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            //evolver.restart();
+            //getEvolverThread().stop();
+            //evolver.getWorld().restart();
+            //evolver.getGeneticEngine().loadPopulation(chooser.getSelectedFile().getAbsolutePath());
+            //evolver.getWorld().startSim();
+
+        }*/
+        evolver.stopThreads();
+        t.stop();
+        try {
+            t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        t = new Thread(evolver);
+        t.run();
+
+        //startWorld(true);
+        //evolver.getWorld().generateWorld(new WorldGenerationSettings(), WorldGenerationMethod.EMPTY);
+        //world.generateDrunkenWalkWorld(this,new WorldGenerationSettings());
+
+        //The GUI has been created, so start the simulation's thread
+
+    }
 	
 	private void saveBehaviour() {
-        if (fittestGenes != null) {
+        //if (fittestGenes != null) {
             JFileChooser chooser = new JFileChooser();
             chooser.setCurrentDirectory(new File("C:/Users/Alex/Dropbox/EclipseWorkspace/life-simulation"));
-            if (chooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION)
-                GeneManager.saveToFile(chooser.getSelectedFile() + ".txt", fittestGenes);
+            if (chooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
+                //GeneManager.saveChromosomes(chooser.getSelectedFile().getAbsolutePath(), evolver.getGeneticEngine().getGenotype().getPopulation().getChromosomes());
+                GeneManager.saveFittestChromosomeAsGeneration(chooser.getSelectedFile().getAbsolutePath(), evolver.getGeneticEngine().getGenotype().getPopulation().getChromosomes());
+            }
 
-        }
+
+
+        //}
 	}
 
     public SimulationSummaryPanel getSimulationSummaryPanel() {
